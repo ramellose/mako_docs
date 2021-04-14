@@ -1,0 +1,58 @@
+# Meta Data for SEO
+
+## Homepage
+title = "mako"
+titleSeparator = "-"
+titleAddition = "Microbial Associations Katalog"
+description = "Mako helps you structure data from multiple networks to carry out better meta-analysis. "
+
+## Open Graph + Twitter Cards
+images = ["mako.png"]
+twitterSite = "rutjers"
+twitterCreator = "rutjers"
+facebookAuthor = "rottjers.sam"
+facebookPublisher = "rottjers.sam"
+ogLocale = "en_US"
+
+## JSON-LD
+schemaType = "Organization"
+schemaLogo = "mako.ico"
+schemaTwitter = "https://twitter.com/rutjers"
+schemaLinkedIn = "www.linkedin.com/in/samrottjers"
+schemaGitHub = "https://github.com/ramellose"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+
+# Footer
+footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+
+# Alert
+alert = false
+alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+
+# Edit Page
+docsRepo = "https://github.com/ramellose/mako"
+editPage = false
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = false
+  breadCrumb = false
+  highLight = true
+  kaTex = false
