@@ -1,24 +1,47 @@
-[[docs]]
-  name = "Prologue"
-  weight = 10
-  identifier = "prologue"
-  url = "/docs/prologue/"
+######################
+### Main left menu ###
+######################
 
-[[docs]]
-  name = "Help"
-  weight = 60
-  identifier = "help"
-  url = "/docs/help/"
+  
+[[main]]
+  name = "About"
+  weight = 10
+  identifier = "about"
+  url = "/info/mako/abstract/"
+
+[[main]]  name = "Demo"
+  url = "/demo/testfile1/test"
+  identifier = "demo"
+  weight = 20
 
 [[main]]
-  name = "Docs"
-  url = "/docs/prologue/introduction/"
-  weight = 10
+  name = "Manual"
+  url = "/manual/testfile1/test"
+  identifier = "manual"
+  weight = 30
 
+[[main]]
+  name = "Neo4j"
+  url = "/neo4j/testfile1/test"
+  identifier = "neo4j"
+  weight = 40
+
+[[main]]
+  name = "Cypher"
+  url = "/cypher/testfile1/test"
+  identifier = "cypher"
+  weight = 50
+
+[[main]]
+  name = "Examples"
+  url = "/examples/testfile1/test"
+  identifier = "examples"
+  weight = 60
+  
 [[main]]
   name = "Blog"
   url = "/blog/"
-  weight = 20
+  weight = 70
 
 [[social]]
   name = "Twitter"
@@ -33,7 +56,63 @@
   post = "v0.1.0"
   weight = 20
 
-# [[footer]]
-#   name = "Privacy"
-#   url = "/privacy-policy/"
-#   weight = 10
+###########################
+#### About page menu ######
+###########################
+
+[[info]]
+  name = "Mako"
+  weight = 10
+  identifier = "mako"
+  url = "/info/mako/"
+
+[[info]]
+  name = "Contributors"
+  weight = 20
+  identifier = "contributors"
+  url = "/about/contributors/"
+
+###########################
+#### Demo page menu  ######
+###########################
+
+[[demo]]
+  name = "Test"
+  url = "/demo/testfile1/test"
+  weight = 10
+  
+###########################
+#### Manual page menu  ####
+###########################
+
+[[manual]]
+  name = "Test"
+  url = "/manual/testfile1/test"
+  weight = 10
+  
+###########################
+#### Neo4j page menu   ####
+###########################
+
+[[neo4j]]
+  name = "Test"
+  url = "/neo4j/testfile1/test"
+  weight = 10
+
+###########################
+#### Cypher page menu  ####
+###########################
+
+[[cypher]]
+  name = "Test"
+  url = "/cypher/testfile1/test"
+  weight = 10
+
+###########################
+# Case studies page menu  #
+###########################
+
+[[examples]]
+  name = "Test"
+  url = "/examples/testfile1/test"
+  weight = 10
