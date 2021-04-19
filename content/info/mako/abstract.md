@@ -1,58 +1,17 @@
 ---
-title: "Introduction"
-description: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-lead: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-date: 2020-10-06T08:48:57+00:00
-lastmod: 2020-10-06T08:48:57+00:00
+title: "Abstract"
+description: ""
+date: 2021-04-19T10:58:02+02:00
+lastmod: 2021-04-19T10:58:02+02:00
 draft: false
-images: []
 menu:
   info:
     parent: "mako"
-weight: 100
-toc: true
+images: []
 ---
 
-## Get started
+While meta-analytical approaches are increasingly adopted in a range of studies, no framework exists that facilitates flexible and intuitive methods of storage and analysis for microbial association networks. Static network databases are unsuitable for such networks as microbial network construction tools evolve rapidly and do not usually lead to generation of validated microbial interaction networks. Consequently, the analysis of microbial associations demand a more flexible setup that can integrate a wealth of data. To achieve this, we developed mako, a software package for the rapid and simple construction and use of network databases from microbiome data. 
 
-There are two main ways to get started with Doks:
+Mako provides an interface between standard microbiome formats and Neo4j graph databases via a database schema based on semantic web ontologies. It can rapidly populate such databases from BIOM files, tab-delimited files, network files and edge lists of custom properties through its use of batched Cypher queries. Moreover, mako uses HTTP requests to export networks (or derived database items) to Cytoscape, supporting visualization of smaller subsets of the database. 
 
-### Tutorial
-
-{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." >}}
-
-Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
-
-### Quick Start
-
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." >}}
-
-One page summary of how to start a new Doks project. [Quick Start →]({{< relref "quick-start" >}})
-
-## Go further
-
-Recipes, Reference Guides, Extensions, and Showcase.
-
-### Recipes
-
-Get instructions on how to accomplish common tasks with Doks. [Recipes →](https://getdoks.org/docs/recipes/project-configuration/)
-
-### Reference Guides
-
-Learn how to customize Doks to fully make it your own. [Reference Guides →](https://getdoks.org/docs/reference-guides/security/)
-
-### Extensions
-
-Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/breadcrumb-navigation/)
-
-### Showcase
-
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/electric-blocks/)
-
-## Contributing
-
-Find out how to contribute to Doks. [Contributing →](https://getdoks.org/docs/contributing/how-to-contribute/)
-
-## Help
-
-Get help on Doks. [Help →]({{< relref "how-to-update" >}})
+This web page includes all documentation and case studies describing mako, as well as detailed information on how to set up your own Neo4j databases. Find the latest updates on <a href="https://github.com/ramellose/mako">the Github page</a>. 

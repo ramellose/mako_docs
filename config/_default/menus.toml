@@ -9,7 +9,8 @@
   identifier = "about"
   url = "/info/mako/abstract/"
 
-[[main]]  name = "Demo"
+[[main]]  
+  name = "Demo"
   url = "/demo/testfile1/test"
   identifier = "demo"
   weight = 20
