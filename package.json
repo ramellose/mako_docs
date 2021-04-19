@@ -46,6 +46,7 @@
     "clipboard": "^2.0",
     "eslint": "^7.23",
     "flexsearch": "^0.6",
+    "gh-pages": "^3.1.0",
     "highlight.js": "^10.7",
     "hugo-bin": "^0.70",
     "instant.page": "^5.1",
