@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  Doks
+  mako website, supported by Doks
 </h1>
 
 <h3 align="center">
