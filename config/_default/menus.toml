@@ -11,7 +11,7 @@
 
 [[main]]  
   name = "Demo"
-  url = "/demo/testfile1/test"
+  url = "/demo/vignette/intro"
   identifier = "demo"
   weight = 20
 
