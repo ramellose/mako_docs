@@ -17,7 +17,7 @@
 
 [[main]]
   name = "Manual"
-  url = "/manual/testfile1/test"
+  url = "/manual/introduction/intro"
   identifier = "manual"
   weight = 30
 
@@ -78,8 +78,8 @@
 ###########################
 
 [[demo]]
-  name = "Test"
-  url = "/demo/testfile1/test"
+  name = "demo"
+  url = "/demo/vignette/intro"
   weight = 10
   
 ###########################
@@ -87,9 +87,24 @@
 ###########################
 
 [[manual]]
-  name = "Test"
-  url = "/manual/testfile1/test"
+  name = "Manual"
+  url = "/manual/introduction/intro"
   weight = 10
+  
+[[manual]]
+  name = "CLI"
+  url = "/manual/cli/overview"
+  weight = 20
+
+[[manual]]
+  name = "API"
+  url = "/manual/api/overview"
+  weight = 30
+  
+[[manual]]
+  name = "GUI"
+  url = "/manual/gui/overview"
+  weight = 40
   
 ###########################
 #### Neo4j page menu   ####

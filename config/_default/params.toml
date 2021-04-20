@@ -4,7 +4,7 @@
 title = "mako"
 titleSeparator = "-"
 titleAddition = "Microbial Associations Katalog"
-description = "Mako helps you structure data from multiple networks to carry out better meta-analysis. "
+description = "Mako helps you structure data from multiple networks to carry out better meta-analyses. "
 
 ## Open Graph + Twitter Cards
 images = ["mako.png"]
