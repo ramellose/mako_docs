@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Demo data"
 description: ""
 lead: ""
 date: 2021-04-19T11:52:57+02:00
@@ -8,12 +8,12 @@ draft: false
 images: []
 menu: 
   demo:
-    parent: "demo"
+    parent: "mako"
 weight: 1
 toc: true
 ---
 
-In this vignette, several of mako's functions will briefly be introduced with an example data consisting of only 5 taxa and 20 samples. This data set is simple enough that most relevant nodes can be visualized in Neo4j Browser, making it feasible to follow along with all of mako's operations. 
+In this vignette, several of mako's functions will briefly be introduced with an example data set consisting of only 5 taxa and 20 samples. This data set is simple enough that most relevant nodes can be visualized in Neo4j Browser, making it feasible to follow along with all of mako's operations. 
 
 The tables below give an overview of the data contained in the BIOM file. 
 The file and associated networks can be downloaded from <a href="https://github.com/ramellose/mako/tree/master/docs">the mako Github repository</a>. 

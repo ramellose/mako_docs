@@ -8,7 +8,7 @@ draft: false
 images: []
 menu: 
   demo:
-    parent: "demo"
+    parent: "mako"
 weight: 2
 toc: true
 ---

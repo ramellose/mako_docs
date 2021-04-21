@@ -8,7 +8,7 @@ draft: false
 images: []
 menu: 
   demo:
-    parent: "demo"
+    parent: "mako"
 weight: 8
 toc: true
 ---
@@ -20,5 +20,7 @@ Instead of working with the Neo4j database directly, it is also possible to expo
 
 <code>mako io -fp local_filepath -cf -net Genus_demo_1 -cyto -w</code>
 
-
-<img src="/images/demo_6.PNG" alt="Cytoscape with a network imported from Neo4j." width="600"> 
+<figure>
+  <img src="/images/demo_6.PNG" alt="Cytoscape with a network imported from Neo4j." width="600"> 
+  <figcaption>Figure 6: Cytoscape with a network imported from Neo4j.</figcaption>
+</figure>

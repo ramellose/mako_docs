@@ -34,7 +34,7 @@
   weight = 50
 
 [[main]]
-  name = "Examples"
+  name = "Cases"
   url = "/examples/testfile1/test"
   identifier = "examples"
   weight = 60
@@ -78,9 +78,14 @@
 ###########################
 
 [[demo]]
-  name = "demo"
-  url = "/demo/vignette/intro"
+  name = "Pisaster"
+  url = "/demo/pisaster/intro"
   weight = 10
+  
+[[demo]]
+  name = "mako"
+  url = "/demo/vignette/intro"
+  weight = 20
   
 ###########################
 #### Manual page menu  ####
@@ -119,22 +124,21 @@
   name = "Docker"
   url = "/neo4j/docker/docker"
   weight = 20
-
-[[neo4j]]
-  name = "Browser"
-  url = "/neo4j/browser/browser"
-  weight = 30
   
 [[neo4j]]
 name = "Local"
 url = "/neo4j/local/intro"
-weight = 40
+weight = 30
   
 [[neo4j]]
 name = "Server"
 url = "/neo4j/server/server"
-weight = 50
+weight = 40
 
+[[neo4j]]
+  name = "Browser"
+  url = "/neo4j/browser/browser"
+  weight = 50
 
 ###########################
 #### Cypher page menu  ####
@@ -146,9 +150,9 @@ weight = 50
   weight = 10
   
 [[cypher]]
-  name = "Pisaster"
-  url = "/cypher/pistaster/intro"
-  weight = 10
+  name = "Schema"
+  url = "/cypher/schema/intro"
+  weight = 20
 
 ###########################
 # Case studies page menu  #

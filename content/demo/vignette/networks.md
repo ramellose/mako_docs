@@ -8,7 +8,7 @@ draft: false
 images: []
 menu: 
   demo:
-    parent: "demo"
+    parent: "mako"
 weight: 4
 toc: true
 ---
@@ -21,4 +21,8 @@ If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http:/
 
 <code>MATCH p=(n:Edge)--() RETURN p LIMIT 50</code>
 
-<img src="/images/demo_2.PNG" alt="Edge links to taxa and networks." width="600"> 
+<figure>
+  <img src="/images/demo_2.PNG" alt="Edge links to taxa and networks." width="600"> 
+  <figcaption>Figure 2: Edge links to taxa and networks.</figcaption>
+</figure>
+

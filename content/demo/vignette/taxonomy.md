@@ -8,7 +8,7 @@ draft: false
 images: []
 menu: 
   demo:
-    parent: "demo"
+    parent: "mako"
 weight: 7
 toc: true
 ---
@@ -23,5 +23,8 @@ If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http:/
 
 <code>MATCH p=(n:Network {name: 'Order_demo_1'})--(:Property) RETURN p LIMIT 50</code>
 
-<img src="/images/demo_5.PNG" alt="Network merged by taxonomy." width="600"> 
+<figure>
+  <img src="/images/demo_5.PNG" alt="Network merged by taxonomy." width="600"> 
+  <figcaption>Figure 5: Network merged by taxonomy.</figcaption>
+</figure>
 

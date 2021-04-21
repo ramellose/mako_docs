@@ -8,7 +8,7 @@ draft: false
 images: []
 menu: 
   demo:
-    parent: "demo"
+    parent: "mako"
 weight: 5
 toc: true
 ---
@@ -22,5 +22,9 @@ If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http:/
 
 <code>MATCH p=(n:Set)--() RETURN p LIMIT 50</code>
 
-<img src="/images/demo_3.PNG" alt="Network sets with edges." width="600"> 
+
+<figure>
+  <img src="/images/demo_3.PNG" alt="Network sets with edges." width="600"> 
+  <figcaption>Figure 3: Network sets with edges.</figcaption>
+</figure>
 
