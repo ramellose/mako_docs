@@ -23,13 +23,13 @@
 
 [[main]]
   name = "Neo4j"
-  url = "/neo4j/testfile1/test"
+  url = "/neo4j/introduction/intro"
   identifier = "neo4j"
   weight = 40
 
 [[main]]
   name = "Cypher"
-  url = "/cypher/testfile1/test"
+  url = "/cypher/introduction/intro"
   identifier = "cypher"
   weight = 50
 
@@ -111,17 +111,43 @@
 ###########################
 
 [[neo4j]]
-  name = "Test"
-  url = "/neo4j/testfile1/test"
+  name = "Neo4j"
+  url = "/neo4j/introduction/intro"
   weight = 10
+
+[[neo4j]]
+  name = "Docker"
+  url = "/neo4j/docker/docker"
+  weight = 20
+
+[[neo4j]]
+  name = "Browser"
+  url = "/neo4j/browser/browser"
+  weight = 30
+  
+[[neo4j]]
+name = "Local"
+url = "/neo4j/local/intro"
+weight = 40
+  
+[[neo4j]]
+name = "Server"
+url = "/neo4j/server/server"
+weight = 50
+
 
 ###########################
 #### Cypher page menu  ####
 ###########################
 
 [[cypher]]
-  name = "Test"
-  url = "/cypher/testfile1/test"
+  name = "Cypher"
+  url = "/cypher/introduction/intro"
+  weight = 10
+  
+[[cypher]]
+  name = "Pisaster"
+  url = "/cypher/pistaster/intro"
   weight = 10
 
 ###########################

@@ -17,14 +17,17 @@ While mako's functions can be called from command line, they have also been docu
 
 All Neo4j driver classes in mako inherit methods from the <code>ParentDriver</code> class and therefore have a query method that can be used to run Cypher queries. Queries can be passed as a string. If appliccable, dictionaries for parameterized batch queries can also be used. 
 
-For example, the <code>io</code> module contains the <code>IoDriver</code> class. The IoDriver, like other <code>mako</code> drivers, can be called by providing Neo4j access details:
+For example, the <code>io</code> module contains the <code>IoDriver</code> class. The <code>IoDriver</code>, like other mako drivers, can be called by providing Neo4j access details:
 
-<br>
+<pre>
 <code>
 from mako.scripts.io import IoDriver
-<br>
 driver = IoDriver(user="testuser", 
                   password="test",
-                  uri=inputs['address'], filepath="C:/testfolder/",
+                  uri=inputs['address'], 
+                  filepath="C:/testfolder/",
                   encrypted=False)
-driver.convert_networkx(network=networkx_object, network_id="test_network"</code>
+driver.convert_networkx(network=networkx_object, network_id="test_network"
+</code>
+</pre>
+ 
