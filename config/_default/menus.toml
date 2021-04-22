@@ -162,3 +162,8 @@ weight = 40
   name = "Test"
   url = "/examples/testfile1/test"
   weight = 10
+
+[[examples]]
+  name = "Qiita"
+  url = "/examples/qiita/intro"
+  weight = 10

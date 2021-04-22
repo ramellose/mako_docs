@@ -1,5 +1,5 @@
-baseurl = "https://ramellose.github.io/mako_docs"
-#baseurl = "/"
+#baseurl = "https://ramellose.github.io/mako_docs"
+baseurl = "/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
