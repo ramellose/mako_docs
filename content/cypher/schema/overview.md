@@ -24,6 +24,9 @@ The database schema used by mako was designed to meet several demands:
 
 As a result, each of the items always present in networks and BIOM files have their own node label and can more easily be accessed. In contrast, property nodes are more flexible and can be connected to any other node. The complete schema, sufficient to import BIOM files and network files, therefore specifies both standard node types and node relationships (Figure 1). 
 
+<div id="labeldata", style="height:150px; border:3px solid black; padding:10px">
+<span id="labelspan"> <a href="https://www.ebi.ac.uk/ols/ontologies/ncit">Find the complete NCI Thesaurus here.</a> </span></div>
+
 <div id="mynetwork", style="height:500px"></div>
 
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -77,4 +80,34 @@ As a result, each of the items always present in networks and BIOM files have th
   };
   var options = {};
   var network = new vis.Network(container, data, options);
+  
+  network.on("click", function (params) {
+    var dict = { 
+              1: "A connection between nodes in a graph.",
+              2: "A coordinated set of actions and observations designed to generate data, with the ultimate goal of discovery or hypothesis testing.",
+              3: "An interconnected system of things or people.",
+              4: "A distinguishing quality or prominent aspect of a person, object, action, process, or substance.", 
+              5: "A part of a thing, or of several things, taken to demonstrate or to determine the character of the whole, e.g. a substance, or portion of material obtained for use in testing, examination, or study; particularly, a preparation of tissue or bodily fluid taken for examination or diagnosis.",
+              6: "Ranked categories for the classification of organisms according to their suspected evolutionary relationships.", 
+              7: "A group of organisms that differ from all other groups of organisms and that are capable of breeding and producing fertile offspring.",
+              8: "A taxonomic category ranking below a family (or Subfamily) and above a species and generally consisting of a group of species exhibiting similar characteristics.", 
+              9: "A taxonomic category between Order and Genus. It consists of a group of organisms among which the differences are quite minor, e.g. Equiidae - horses and their relatives.", 
+              10: "A taxonomic category between Class and Family. It is group of organisms that although differing quite a bit among themselves still have a large degree of characteristics in common.", 
+              11: "A collection of taxonomic subdivisions directly under Phylum. It is a major group of organisms, e.g. Mammalia, Reptilia, Gastropoda, Insecta, etc that contains a large number of different sublineages, but have shared characteristics in common (e.g. warm-blooded, fur, six legs etc).", 
+              12: "A major division of a biological kingdom, consisting of closely-related classes; represents a basic fundamental pattern of organization and, presumably, a common descent.", 
+              13: "The highest taxonomic rank, immediately above phylum or division. There are five biological kingdoms (Monera, Protista, Plantae, Fungi, Animalia) into which organisms are grouped, based on common characteristics."};
+    // your element, edge or node
+    console.log(params);
+    var currentID = params.nodes[0];
+    if (typeof(currentID) == "undefined") {
+      // find edges
+      var currentID = params.edges[0];
+      var newLabel = edges.get(currentID).label
+    } else {
+      var newLabel = dict[currentID];
+    }
+    // set span text
+    document.getElementById("labelspan").innerHTML = newLabel;
+});
 </script>
+Figure 1: mako OWL schema. 
