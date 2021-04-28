@@ -87,6 +87,11 @@
   url = "/demo/vignette/intro"
   weight = 20
   
+[[demo]]
+  name = "Custom queries"
+  url = "/demo/query/intro"
+  weight = 20
+  
 ###########################
 #### Manual page menu  ####
 ###########################
