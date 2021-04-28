@@ -1,5 +1,5 @@
 ---
-title: "Writing custom uq"
+title: "Writing custom queries"
 description: ""
 lead: ""
 date: 2021-04-28T13:57:41+02:00

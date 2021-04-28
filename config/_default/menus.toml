@@ -90,7 +90,7 @@
 [[demo]]
   name = "Custom queries"
   url = "/demo/query/intro"
-  weight = 20
+  weight = 30
   
 ###########################
 #### Manual page menu  ####
