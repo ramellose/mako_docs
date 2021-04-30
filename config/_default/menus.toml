@@ -35,7 +35,7 @@
 
 [[main]]
   name = "Cases"
-  url = "/examples/testfile1/test"
+  url = "/examples/qiita/intro"
   identifier = "examples"
   weight = 60
   
@@ -164,11 +164,16 @@ weight = 40
 ###########################
 
 [[examples]]
-  name = "Test"
-  url = "/examples/testfile1/test"
-  weight = 10
-
-[[examples]]
   name = "Qiita"
   url = "/examples/qiita/intro"
   weight = 10
+  
+[[examples]]
+  name = "Motifs"
+  url = "/examples/motifs/intro"
+  weight = 20
+  
+[[examples]]
+  name = "Propionate"
+  url = "/examples/propionate/intro"
+  weight = 30

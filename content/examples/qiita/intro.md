@@ -20,4 +20,4 @@ For common issues with setting up the Docker, please check out the Troubleshooti
 
 When you change Neo4j versions, the browser cache may cause you to load an older version of the Neo4j Browser. Make sure to clear your cache in between switching versions. The exact steps for clearing your browser cache vary per browser. 
 
-Gonzalez, A., Navas-Molina, J. A., Kosciolek, T., McDonald, D., Vázquez-Baeza, Y., Ackermann, G., ... & Knight, R. (2018). Qiita: rapid, web-enabled microbiome meta-analysis. <i>Nature methods, 15</i>(10), 796-798.
+<a href="https://www.nature.com/articles/s41592-018-0141-9">Gonzalez, A., Navas-Molina, J. A., Kosciolek, T., McDonald, D., Vázquez-Baeza, Y., Ackermann, G., ... & Knight, R. (2018). Qiita: rapid, web-enabled microbiome meta-analysis. <i>Nature methods, 15</i>(10), 796-798.</a>
