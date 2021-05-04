@@ -177,3 +177,8 @@ weight = 40
   name = "Propionate"
   url = "/examples/propionate/intro"
   weight = 30
+  
+  [[examples]]
+  name = "IBD"
+  url = "/examples/ibd/intro"
+  weight = 40
