@@ -22,9 +22,9 @@ from mako.scripts.io import IoDriver, add_metadata
 
 loc = os.getcwd()
 
-driver = IoDriver(uri='neo4j://localhost:7687',
+driver = IoDriver(uri='neo4j://localhost:7688',
                     user='neo4j',
-                    password='demo',
+                    password='test',
                     filepath=loc,
                     encrypted=False)
 add_metadata(filepath=loc, location="../data/empo_annotation.tsv", driver=driver)

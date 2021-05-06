@@ -56,17 +56,20 @@ corr_data <- corr_data[corr_data$Metabolite %in% rownames(metabolite_abundances)
 
 corr_data$p <- p.adjust(corr_data$p, method="bonferroni")
 corr_data <- corr_data[corr_data$p <= 0.05,]
+corr_data$p <- NULL
 </pre></code>
 
-At over 7000 significant correlations remaining, this still leaves us with a large number of microbe-metabolite correlations to interpret. We will therefore include metabolite features in the Neo4j database so we can use this to make more informative analyses. To do so, we need to create a tab-delimited edge list that contains the feature data. Finally, we will write all required files to formats that can be used by mako.  
+At over 7000 significant correlations remaining, this still leaves us with a large number of microbe-metabolite correlations to interpret. We will therefore include metabolite features in the Neo4j database so we can use this to make more informative analyses. Finally, we will export all other required files in formats that can be used by mako. The default <code>write.table</code> function does not export the row name header in a format that the Python BIOM implementation can work with, so we will adapt this call to prevent any bugs. The same goes for the edge lists, which should not include row numbers. Moreover, we want to remove any quotes in the file, because those will be uploaded to Neo4j as well. Finally, keep in mind that column names should not contain characters that cannot be used as Neo4j node labels, like a period. 
 
 <pre><code>
-chemclass <- data.frame(Metabolite=rownames(metabolite_features), Chemical.class=metabolite_features$Chemical.class)
-standardmatch <- data.frame(Metabolite=rownames(metabolite_features), Standard.match=metabolite_features$Standard.match)
+chemclass <- data.frame(Metabolite=rownames(metabolite_features), Chemical_class=metabolite_features$Chemical.class)
+chemclass <- chemclass[!is.na(chemclass$Chemical_class),]
+standardmatch <- data.frame(Metabolite=rownames(metabolite_features), Standard_match=metabolite_features$Standard.match)
+standardmatch <- standardmatch[!is.na(standardmatch$Standard_match),]
 
-write.table(ibd_taxa, "ibd_taxa.tsv", sep="\t")
-write.table(ibd_lineages, "ibd_lineages.tsv", sep="\t")
-write.table(corr_data, "microbe_metabolite.tsv", sep="\t")
-write.table(chemclass, "chemclass.tsv", sep="\t")
-write.table(standardmatch, "standardmatch.tsv", sep="\t")
+write.table(corr_data, "microbe_metabolite.tsv", sep="\t", row.names=FALSE, quote=FALSE)
+write.table(data.frame("Species"=rownames(ibd_taxa), ibd_taxa), "ibd_taxa.tsv", sep="\t", row.names=FALSE, quote=FALSE)
+write.table(data.frame("Species"=rownames(ibd_lineages), ibd_lineages), "ibd_lineages.tsv", sep="\t", row.names=FALSE, quote=FALSE)
+write.table(chemclass, "chemclass.tsv", sep="\t", row.names=FALSE, quote=FALSE)
+write.table(standardmatch, "standardmatch.tsv", sep="\t", row.names=FALSE, quote=FALSE)
 </pre></code>

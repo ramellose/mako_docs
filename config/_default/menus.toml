@@ -178,7 +178,12 @@ weight = 40
   url = "/examples/propionate/intro"
   weight = 30
   
-  [[examples]]
+[[examples]]
   name = "IBD"
   url = "/examples/ibd/intro"
   weight = 40
+  
+[[examples]]
+  name = "Validation"
+  url = "/examples/metalit/intro"
+  weight = 50
