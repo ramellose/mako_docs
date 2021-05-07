@@ -35,7 +35,7 @@
 
 [[main]]
   name = "Cases"
-  url = "/examples/qiita/intro"
+  url = "/examples/intro"
   identifier = "examples"
   weight = 60
   
@@ -153,37 +153,61 @@ weight = 40
   name = "Cypher"
   url = "/cypher/introduction/intro"
   weight = 10
+
+[[cypher]]
+  name = "Basics"
+  url = "/cypher/basics/intro"
+  weight = 20
+
+[[cypher]]
+  name = "Patterns"
+  url = "/cypher/patterns/intro"
+  weight = 30
   
 [[cypher]]
   name = "Schema"
   url = "/cypher/schema/intro"
-  weight = 20
+  weight = 40
 
 ###########################
 # Case studies page menu  #
 ###########################
 
 [[examples]]
+  name = "Case studies"
+  url = "/examples/intro"
+  weight = 1
+
+[[examples]]
+  name = "Sponges"
+  url = "/examples/sponges/intro"
+  weight = 10
+
+[[examples]]
+  name = "IBD"
+  url = "/examples/ibd/intro"
+  weight = 20
+
+[[examples]]
+  name = "Validation"
+  url = "/examples/metalit/intro"
+  weight = 30
+  
+[[examples]]
   name = "Qiita"
   url = "/examples/qiita/intro"
-  weight = 10
+  weight = 40
   
 [[examples]]
   name = "Motifs"
   url = "/examples/motifs/intro"
-  weight = 20
+  weight = 50
   
 [[examples]]
   name = "Propionate"
   url = "/examples/propionate/intro"
-  weight = 30
+  weight = 60
   
-[[examples]]
-  name = "IBD"
-  url = "/examples/ibd/intro"
-  weight = 40
+
   
-[[examples]]
-  name = "Validation"
-  url = "/examples/metalit/intro"
-  weight = 50
+

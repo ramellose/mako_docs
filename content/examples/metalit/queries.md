@@ -111,7 +111,7 @@ We only need to add one last trick before we can easily export this network to C
 Before you run the <code>driver.export_cyto()</code> command, make sure to have Cytoscape open! 
 
 <pre><code>
-driver.query("MERGE (n:Network {name: 'Butyrate_network'}) RETURN n")
+driver.write("MERGE (n:Network {name: 'Butyrate_network'}) RETURN n")
 
 butyrate_query = "MATCH x=(n:Metabolite {name: 'Starch (Amylopectin, Amylose, 1,4-alpha-D-Glucan, Pullulan, Resistant starch)'})-" \
                  "[:QUALITY_OF {interaction: 'macromolecule_degradation'}]-(i:Microbe)-[r]-(b:Metabolite) " \
