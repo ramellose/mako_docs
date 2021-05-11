@@ -13,7 +13,9 @@ weight: 301
 toc: true
 ---
 
-Database schemas are blueprints that describe how data in a database is organized. By defining schemas, we are able to design queries that can access data stored according to those schemas. Hence, mako's core component is a database schema constructed from several OWL terms. This database schema also defines constraints for the data and provides guidance on how data needs to be uploaded to become easily accessible. Most functionality of the API uses the schema to rapidly upload BIOM files, check edge weights or find associations between related species. 
+Database schemas are blueprints that describe how data in a database is organized. By defining schemas, we are able to design queries that can access data stored according to those schemas. Hence, mako's core component is a database schema constructed from several OWL terms. This database schema also defines constraints for the data and provides guidance on how data needs to be uploaded to become easily accessible.
+
+In a nutshell, mako takes the relationships defined in the OWL file and queries the database to find relationships that do not connect to nodes described in that file. If this is the case, mako raises an error that the relationship is used incorrectly.
 
 To properly integrate with Neo4j's ability to work with ontology web language (OWL), each node and relationship label is derived from an existing ontology, the NCI Thesaurus (Sioutos et al., 2007). However, since relationships are not well-defined across biological ontologies, constraints for relationships were defined manually with Protégé (Noy et al., 2001). For each relationship, domains and ranges (target and source nodes) were specified. While these axioms are not added to Neo4j as actual constraints, mako can run checks to see if domain and range axioms are violated by any nodes or relationships in the database. 
 
