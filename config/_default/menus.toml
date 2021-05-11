@@ -9,40 +9,45 @@
   identifier = "about"
   url = "/info/mako/abstract/"
 
+[[main]]
+  name = "Quickstart"
+  url = "/quickstart/guide"
+  weight = 20
+
 [[main]]  
   name = "Demo"
   url = "/demo/vignette/intro"
   identifier = "demo"
-  weight = 20
+  weight = 30
 
 [[main]]
   name = "Manual"
   url = "/manual/introduction/intro"
   identifier = "manual"
-  weight = 30
+  weight = 40
 
 [[main]]
   name = "Neo4j"
   url = "/neo4j/introduction/intro"
   identifier = "neo4j"
-  weight = 40
+  weight = 50
 
 [[main]]
   name = "Cypher"
   url = "/cypher/introduction/intro"
   identifier = "cypher"
-  weight = 50
+  weight = 60
 
 [[main]]
   name = "Cases"
   url = "/examples/intro"
   identifier = "examples"
-  weight = 60
+  weight = 70
   
 [[main]]
   name = "Blog"
   url = "/blog/"
-  weight = 70
+  weight = 80
 
 [[social]]
   name = "Twitter"

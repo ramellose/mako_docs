@@ -9,7 +9,7 @@ images: []
 menu: 
   manual:
     parent: "CLI"
-weight: 6
+weight: 106
 toc: true
 ---
 The <code>netstats</code> module can be used to carry out set operations on networks in the Neo4j database, leading to creation of Set nodes that contain the intersections, unions or differences across (groups of) networks. If no networks are specified, operations are carried out across all networks. 

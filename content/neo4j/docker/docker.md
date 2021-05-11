@@ -9,18 +9,16 @@ images: []
 menu: 
   neo4j:
     parent: "Docker"
-weight: 2
+weight: 102
 toc: true
 ---
 
-<a href="https://www.docker.com/why-docker">Docker</a> is a convenient tool for virtualization. Docker containers contain a standardized environment that can be run from any desktop or via the cloud, solving many issues with compatibility across operating systems. By running software via Docker instead of directly on a desktop, it becomes possible to run different versions of dependencies side-by-side without affecting existing installations. As a result, running Neo4j via Docker can be more convenient. By default, encryption is not supported by the Neo4j container. This can be important when connecting to the database with Neo4j drivers (e.g. those included in mako). 
+<a href="https://www.docker.com/why-docker">Docker</a> is a convenient tool for virtualization. Docker containers contain a standardized environment that can be run from any desktop or via the cloud, solving many issues with compatibility across operating systems. By running software via Docker instead of directly on a desktop, it becomes possible to run different versions of dependencies side-by-side without affecting existing installations. As a result, running Neo4j via Docker can be more convenient. 
 
-For most users, it will be simplest to run Docker Desktop on a local machine. Mac and Windows users need to use <a href="https://www.docker.com/get-started">Docker Desktop</a>, while Linux users can run Docker containers after <a href="https://docs.docker.com/engine/install/ubuntu/">installing docker-engine</a>. 
+Mac and Windows users need to use <a href="https://www.docker.com/get-started">Docker Desktop</a>, while Linux users can run Docker containers after <a href="https://docs.docker.com/engine/install/ubuntu/">installing docker-engine</a>. 
 Please make sure Docker can run on your machine using one of the above links. Mac and Windows users also need to launch Docker Desktop after installation to start using Docker containers.
 
 After installing Docker (Desktop), the Neo4j Docker container can be setup. Each time you call the Docker container for Neo4j, a Neo4j Docker image is pulled from DockerHub and used to start a container. You can specify a range of commands to configure the Neo4j Docker image. For an expansive guide, please take a look at <a href="https://neo4j.com/developer/docker-run-neo4j/">the Neo4j Docker how-to</a>. 
-
-To have a clean testing environment for integration tests, mako uses a newly-started Docker container that can be interacted with. This container is configured so it does not conflict with a default instance of Neo4j Desktop. The command can also be used to run the Neo4j container outside mako's testing environment. After installing Docker and starting Docker Desktop (if appliccable), the mako command can be used to start the Neo4j container:
 
 <pre><code>
 docker run --rm 
@@ -31,7 +29,7 @@ docker run --rm
            neo4j:latest
 </pre></code>
 
-The <code>--rm</code> flag tells Docker to clean up after exiting, while the -d flag means the Docker can be accessed separately. 
+The <code>--rm</code> flag tells Docker to clean up after exiting, while the <code>-d</code> flag means the Docker can be accessed separately. 
 
 Importantly, the <code>--publish</code> flag changes exposed ports, so the Neo4j container can be accessed via navigating to <a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a> in a browser and setting the connection to <code>neo4j://localhost:7688</code> or <code>bolt://localhost:7688</code>. The <code>--name</code> flag sets the container's name, the <code>--env</code> flag sets the username and password for the Neo4j container and <code>neo4j:latest</code> tells Docker to pull the latest image. To stop the Docker container is then quite straightforward:
 

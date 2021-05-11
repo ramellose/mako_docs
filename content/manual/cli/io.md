@@ -9,7 +9,7 @@ images: []
 menu: 
   manual:
     parent: "CLI"
-weight: 5
+weight: 105
 toc: true
 ---
 The <code>io</code> module can be used to write network files to a Neo4j database according to mako's database schema. The <code>-fp</code> prefix contains the shared file path, so there is no need to write the full file path, partial file paths or just filenames are sufficient if <code>-fp</code> is used. 
