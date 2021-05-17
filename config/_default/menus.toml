@@ -102,9 +102,14 @@
 ###########################
 
 [[manual]]
-  name = "Installation"
+  name = "Manual"
   url = "/manual/introduction/intro"
   weight = 10
+  
+[[manual]]
+  name = "Installation"
+  url = "/manual/introduction/intro"
+  weight = 15
   
 [[manual]]
   name = "CLI"
