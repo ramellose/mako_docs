@@ -21,6 +21,7 @@ images: []
 <video controls="" height="200" width="450">
 <source src="/videos/mako.mp4" type="video/mp4"> </source>
 </video><br>
+<a href="/manual/introduction/conda/">Click here for installation instructions.</a>
 <a href="/examples/sponges/setup">Click here for more details.</a>
 <h3>Find microbial associations of interest</h3>
 <video controls="" height="300" width="450">

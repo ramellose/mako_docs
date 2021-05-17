@@ -8,7 +8,7 @@ draft: false
 images: []
 menu: 
   manual:
-    parent: "Manual"
+    parent: "Installation"
 weight: 3
 toc: true
 ---
