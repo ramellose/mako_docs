@@ -15,8 +15,10 @@ toc: true
 
 Conda environments including mako can be installed from the conda page: <a href="https://anaconda.org/ramellose/mako">https://anaconda.org/ramellose/mako</a>. 
 
-To create a new environment including mako, the channel hosting mako, manta and anuran needs to be added first:
+To create a new environment including mako, the channel hosting mako, as well as the bioconda channels, need to be added first:
 <pre><code>
+conda config --add channels bioconda
+conda config --add channels conda-forge
 conda config --add channels ramellose
 </code></pre>
 
