@@ -19,7 +19,7 @@ The command below carries out hypergeometric tests to see if the metadata (skin 
 
 If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>) and run the following query, you should be able to access all taxa that were linked to the skin or gut samples via the hypergeometric test:
 
-<code>MATCH p=(n:Taxon)--(:Property) RETURN p LIMIT 50</code>
+<code>```MATCH p=(n:Taxon)--(:Property) RETURN p LIMIT 50```</code>
 
 <figure>
   <img src="/images/demo_4.PNG" alt="Metadata links to taxa." width="600"> 

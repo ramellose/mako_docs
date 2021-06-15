@@ -19,7 +19,7 @@ Navigate to the location where you downloaded the network files. Now, only the n
 
 If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>) and run the following query, you should be able to access all the nodes connected to edges:
 
-<code>MATCH p=(n:Edge)--() RETURN p LIMIT 50</code>
+<code>```MATCH p=(n:Edge)--() RETURN p LIMIT 50```</code>
 
 <figure>
   <img src="/images/demo_2.PNG" alt="Edge links to taxa and networks." width="600"> 

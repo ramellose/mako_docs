@@ -81,7 +81,7 @@ driver.write(query, batch=edge_rows)
 driver.include_nodes(nodes=edge_rows, name="Metabolite", label="Microbe")
 </pre></code>
 
-Now that the entire literature network has been uploaded to Neo4j, we can start querying this network through Neo4j (Figure 1). 
+Now that the entire literature network has been uploaded to Neo4j, we can start querying this network through Neo4j (Figure 1), for example with the query <code>```MATCH p=(n:Microbe)--(:Metabolite) RETURN p LIMIT 25```</code>. 
 
 <figure>
   <img src="/images/literature_network.PNG" alt="Screenshot of Neo4j Browser showing Sung et al. literature network." width="600"> 
@@ -99,7 +99,7 @@ for edge in edge_rows:
 driver.include_nodes(nodes=genus_dict, name="Genus", label="Microbe")
 </pre></code>
 
-Our association network nodes are stored as <code>Taxon</code> nodes. Can we link these nodes to the literature network now (Figure 2)? Indeed, it looks like we should be able to identify associations that could be linked to specific metabolites. 
+Our association network nodes are stored as <code>Taxon</code> nodes. Can we link these nodes to the literature network now (Figure 2)? Indeed, it looks like we should be able to identify associations that could be linked to specific metabolites with queries like <code>```MATCH p=(n:Microbe)--(:Genus)--(:Taxon) RETURN p LIMIT 25```</code>.  
 
 <figure>
   <img src="/images/literature_associations.PNG" alt="Screenshot of Neo4j Browser showing Sung et al. literature nodes connecting to association network." width="600"> 

@@ -10,5 +10,5 @@ mako neo4biom -fp local_filepath -cf -u neo4j -p test -a bolt://localhost:7688 -
 If you access the Neo4j Browser (http://localhost:7475/browser/) and run the following query, you should be able to access all the nodes connected to taxa:</description></item><item><title>Uploading networks</title><link>https://ramellose.github.io/mako_docs/demo/vignette/networks/</link><pubDate>Mon, 19 Apr 2021 11:49:52 +0200</pubDate><guid>https://ramellose.github.io/mako_docs/demo/vignette/networks/</guid><description>Navigate to the location where you downloaded the network files. Now, only the network files and the file path need to be provided.
 mako io -fp local_filepath -cf -net demo_1.graphml demo_2.graphml
 If you access the Neo4j Browser (http://localhost:7475/browser/) and run the following query, you should be able to access all the nodes connected to edges:
-MATCH p=(n:Edge)&amp;ndash;() RETURN p LIMIT 50
+MATCH p=(n:Edge)--() RETURN p LIMIT 50
 Figure 2: Edge links to taxa and networks.</description></item></channel></rss>

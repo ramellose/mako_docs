@@ -20,7 +20,7 @@ The command below generates a network containing all matching edges between <cod
 
 If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>) and run the following query, you should be able to access all the edges part of sets:
 
-<code>MATCH p=(n:Set)--() RETURN p LIMIT 50</code>
+<code>```MATCH p=(n:Set)--() RETURN p LIMIT 50```</code>
 
 
 <figure>

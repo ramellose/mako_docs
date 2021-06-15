@@ -31,7 +31,7 @@ mako io -cf -meta sponge_class.tsv
 mako io -cf -meta sponge_phylum.tsv
 </pre></code>
 
-After completing the above tasks, you should be able to find phylogenetic levels that are linked to HMA or LMA status. 
+After completing the above tasks, you should be able to find phylogenetic levels that are linked to HMA or LMA status using the query <code>```MATCH p=(n:Type)--() RETURN p LIMIT 25```</code>. 
 
 <figure>
   <img src="/images/sponge_type.PNG" alt="Screenshot of Neo4j Browser showing Cypher query outcome with Type nodes." width="600"> 

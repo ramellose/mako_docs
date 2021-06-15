@@ -30,7 +30,7 @@ mako io -cf -meta chemclass.tsv
 mako io -cf -meta standardmatch.tsv
 </pre></code>
 
-After completing the above tasks, you should be able to conveniently query all metabolites in the database. For example, we can easily find the chemical classes that certain metabolite clusters belong to. 
+After completing the above tasks, you should be able to conveniently query all metabolites in the database. For example, we can easily find the chemical classes that certain metabolite clusters belong to with the query <code>```MATCH p=(:Metabolite)--(:Chemical_class) RETURN p LIMIT 25```</code>. 
 
 <figure>
   <img src="/images/ibd_metabolites.PNG" alt="Screenshot of Neo4j Browser showing Cypher query outcome with Metabolite nodes." width="600"> 

@@ -66,7 +66,7 @@ all_nodes = set(map(tuple, all_nodes))
 
 Note that, if we change the query, we may need to change our queries to go along with this. For example, we can choose to return the genus assignment of the association partners rather than the pattern above. There is no need to specify the <code>Taxon</code> nodes, since the only connection between <code>Genus</code> and <code>Edge</code> nodes is via taxa. 
 
-<code><pre>
+<pre><code>
 query = "MATCH (:Genus {name: 'g__Odoribacter'})--()--(:Edge)--()--(n:Genus) RETURN n"
 query_results = driver.query(query)
 
@@ -81,7 +81,7 @@ We actually have fewer matches than before. Apparently, not all associations are
 
 If we are interested in finding those associations without a genus assignment, we can actually add this to the query. The <code>WHERE NOT</code> clause states that the node <code>n</code> cannot have a link to a <code>Genus</code>, while the <code>WITH</code> clause then uses this node to return the pattern matching the <code>Family</code> node. 
 
-<code><pre>
+<pre><code>
 query = "MATCH (:Genus {name: 'g__Odoribacter'})--()--(:Edge)--(n) 
          WHERE NOT (n)--(:Genus) 
          WITH n MATCH p=(n)--(:Family) RETURN p"
@@ -96,7 +96,7 @@ print(query_results[0])
 
 Finally, it is also possible that we may have specified a query that is technically correct, but the pattern does not match to any data in the database. For example, <code>Genus</code> nodes can only connect to <code>Taxon</code> nodes, and <code>Taxon</code> nodes cannot directly connect to a <code>Network</code> node. In this case, the query results are just an empty list.
 
-<code><pre>
+<pre><code>
 query = "MATCH p=(:Genus {name: 'g__Odoribacter'})--()--(:Network) RETURN p"
 query_results = driver.query(query)
 

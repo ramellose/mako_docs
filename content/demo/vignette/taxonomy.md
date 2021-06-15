@@ -19,9 +19,9 @@ The command below merges networks by taxonomic level. For example, by merging to
 
 If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>) and run the following query, you should be able to access two of the agglommerated networks:
 
-<code>MATCH p=(n:Network {name: 'Genus_demo_1'})--(:Property) RETURN p LIMIT 50</code>
+<code>```MATCH p=(n:Network {name: 'Genus_demo_1'})--(:Property) RETURN p LIMIT 50```</code>
 
-<code>MATCH p=(n:Network {name: 'Order_demo_1'})--(:Property) RETURN p LIMIT 50</code>
+<code>```MATCH p=(n:Network {name: 'Order_demo_1'})--(:Property) RETURN p LIMIT 50```</code>
 
 <figure>
   <img src="/images/demo_5.PNG" alt="Network merged by taxonomy." width="600"> 

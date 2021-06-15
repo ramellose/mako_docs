@@ -20,7 +20,7 @@ Navigate to the location where you downloaded the BIOM file. By storing the conf
 
 If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>) and run the following query, you should be able to access all the nodes connected to taxa:
 
-<code>MATCH p=(n:Taxon)--() RETURN p LIMIT 50</code>
+<code>```MATCH p=(n:Taxon)--() RETURN p LIMIT 50```</code>
 
 <figure>
   <img src="/images/demo_1.PNG" alt="Taxon links to other nodes." width="600"> 
