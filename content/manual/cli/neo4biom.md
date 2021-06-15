@@ -19,6 +19,7 @@ For each file, an Experiment node is created that matches the filename. If more 
 
 <ul>
   <li><code>-biom</code> One or more (filepaths of) BIOM files</li>
+  <li><code>-qza</code> One or more (filepaths of) Qiime2 archive files containing a feature table (frequency or taxonomy)</li>
   <li><code>-count</code> One or more tab-delimited count tables (samples as columns)</li>
   <li><code>-tax</code> One or more tab-delimited taxonomy tables</li>
   <li><code>-tm</code> One or more tab-delimited files with taxon metadata</li>

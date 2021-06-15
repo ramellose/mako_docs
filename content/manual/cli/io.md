@@ -12,9 +12,9 @@ menu:
 weight: 105
 toc: true
 ---
-The <code>io</code> module can be used to write network files to a Neo4j database according to mako's database schema. The <code>-fp</code> prefix contains the shared file path, so there is no need to write the full file path, partial file paths or just filenames are sufficient if <code>-fp</code> is used. 
+The <code>io</code> module can be used to write network files to a Neo4j database according to mako's database schema. Networks can be imported as graphml files, gml files or as weighted edge lists (text files with three columns: source nodes, target nodes and the edge weights). The <code>-fp</code> prefix contains the shared file path, so there is no need to write the full file path, partial file paths or just filenames are sufficient if <code>-fp</code> is used. 
 
-The <code>io</code> module also has options for adding extra metadata to the Neo4j database. If a tab-delimited edge list is supplied with existing nodes in the 1st column and new properties in the 2nd column, this is used to create a new Property node with relationships containing property values.
+The <code>io</code> module also has options for adding extra metadata to the Neo4j database. If a tab-delimited edge list is supplied with existing nodes in the 1st column and new properties in the 2nd column, this is used to create a new Property node with relationships containing property values.If all property values are strings, a new node is made with a label identical to the column value and the node name as the string value. 
 
 Finally, the module can delete and export networks or derived sets (generated with the <code>netstats</code> module) to a running instance of Cytoscape or to a graphml file. To run these operations, the <code>-net</code> parameter should be given names of Network or Set names in the Neo4j database.
 
