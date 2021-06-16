@@ -26,7 +26,7 @@ loc = os.getcwd()
 
 driver = IoDriver(uri='neo4j://localhost:7688',
                     user='neo4j',
-                    password='demo',
+                    password='test',
                     filepath=loc,
                     encrypted=False)
 </pre></code>
@@ -39,7 +39,7 @@ query = 'MATCH p=(:Taxon)--(:Metabolite)--(:Chemical_class {name: "Sphingolipids
 results = driver.query(query)
 print(len(results))
 
-83
+30
 
 query = 'MATCH p=(:Taxon)--(:Metabolite)--(:Chemical_class {name: "Bile acids, alcohols and derivatives"}) RETURN p'
 results = driver.query(query)
@@ -53,18 +53,12 @@ It looks like the correlations indeed included some that have previously been li
 <pre><code>
 query = 'MATCH p=(:Family)--(:Taxon)--(:Metabolite)--(:Chemical_class {name: "Sphingolipids"}) RETURN p'
 results = driver.query(query)
-print(len(results))
-
-30
 
 query = 'MATCH p=(:Family)--(:Taxon)--(:Metabolite)--(:Chemical_class {name: "Bile acids, alcohols and derivatives"}) RETURN p'
 results = driver.query(query)
-print(len(results))
-
-78
 </pre></code>
 
-It looks like many of the sphingolipid associations are actually to taxa that do not have a family assignment. However, we can still take a closer look at the remaining taxa. We can make a quick barplot in Python to take a closer look at this. The script below first extracts a list of Family assignments from the query output and then visualizes this. The family name is the first node returned by this pattern, so we use a list comprehension to get to these names. 
+We can make a quick barplot in Python to take a closer look at the family assignments. The script below first extracts a list of Family assignments from the query output and then visualizes this. The family name is the first node returned by this pattern, so we use a list comprehension to get to these names. 
 
 
 <pre><code>

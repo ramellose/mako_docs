@@ -8,7 +8,7 @@ MATCH p=(:Metabolite {name: 'Starch (Amylopectin, Amylose, 1,4-alpha-D-Glucan, P
 -[:QUALITY_OF {interaction: 'macromolecule_degradation'}]
 -(:Microbe)-[r]-(:Metabolite {name: 'Acetate'}) 
 WHERE r.interaction IN ['production', 'consumption_production'] 
-RETURN p LIMIT 50"
+RETURN p LIMIT 50
 </pre></code><p>We can easily adapt this query to find producers of lactate as well. To do so, we need to do the same thing we did with the relationship; assign a variable to the second metabolite and state in the <code>WHERE</code> clause that it needs to be either acetate or lactate.</p><pre><code>
 MATCH p=(:Metabolite {name: 'Starch (Amylopectin, Amylose, 1,4-alpha-D-Glucan,  Pullulan, Resistant starch)'})
 -[:QUALITY_OF {interaction: 'macromolecule_degradation'}]

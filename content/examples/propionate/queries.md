@@ -83,13 +83,11 @@ for motif in lac_motifs:
                     'Network': motif['n']['name'],
                     'Propionate formation': motif['p'][8]['name'][3:]})
 for motif in fuc_motifs:
-    if motif['p'][4]['name'] not in all_edges:
         results.append({'Sugar': 'Fucose or rhamnose',
                         'Sugar degradation': motif['p'][0]['name'][3:],
                         'Network': motif['n']['name'],
                         'Propionate formation': motif['p'][8]['name'][3:]})
 for motif in sacc_motifs:
-    if motif['p'][4]['name'] not in all_edges:
         results.append({'Sugar': 'Most monosaccharides',
                         'Sugar degradation': motif['p'][0]['name'][3:],
                         'Network': motif['n']['name'],

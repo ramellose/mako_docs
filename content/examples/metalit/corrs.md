@@ -19,7 +19,7 @@ To upload our association network, we need to open a terminal and navigate to th
 
 <pre><code>
 mako neo4biom -u neo4j -p test -a neo4j://localhost:7688 -cf -biom 11766.biom 
-mako io -cf -net 11766.graphml
+mako io -cf -net 11766.txt
 </pre></code>
 
 In the next part of this case study, we will need to parse a XML file so it can be uploaded to Neo4j. Because this requires some custom scripts, we will use the mako API rather than the CLI to do so. It can therefore be helpful to run the remainder of the case study from a Python IDE. 

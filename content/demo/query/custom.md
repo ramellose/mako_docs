@@ -56,7 +56,7 @@ To access values in the query, it can be helpful to process them. Neo4j does not
 
 The script below does exactly this: it first makes a list of lists, with each sublist containing all node names (not relationships) in each pattern. The sublists are then sorted. Next, the set of each sublist is taken, so that they only contain unique nodes. For this query, this step is not actually necessary, but for loops like (A--B--C--A) it makes sure that we do not return (B--C--A--B) too. Finally, we return only unique sublists. 
 
-<code><pre>
+<pre><code>
 all_nodes = [[y['name'] for y in x['p'] if type(y) == dict] for x in query_results]
 for y in all_nodes:
     y.sort()

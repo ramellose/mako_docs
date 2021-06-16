@@ -21,7 +21,7 @@ If you have not done so yet, download the literature-curated network from <a hre
 
 For our association network, we will work with a network that we previously generated using data from Qiita, specifically <a href="https://qiita.ucsd.edu/study/description/11766">The Effect of the Microbiome on Drug Metabolism, ID 11766</a>. The network has been generated with FlashWeave, with the heterogeneous mode set to false and the minimum number of observations to 10. Since most taxa did not have species assignments, they were merged by genus. The data was then filtered so all taxa with less than 20% prevalence were moved to a synthetic "Bin" taxon.  <br><br>
 For convenience, pre-processed files are available below:<br>
-<a href="/demo/11766_species.biom">11766.biom</a><br>
-<a href="/demo/11766_species.graphml">11766.graphml</a><br>
+<a href="/demo/11766.biom">11766.biom</a><br>
+<a href="/demo/11766.txt">11766.txt</a><br>
 
 <a href="https://www.nature.com/articles/ncomms15393">Sung, J., Kim, S., Cabatbat, J. J. T., Jang, S., Jin, Y. S., Jung, G. Y., ... & Kim, P. J. (2017). Global metabolic interaction network of the human gut microbiota for context-specific community-scale analysis. <i>Nature communications, 8</i>(1), 1-12.</a>

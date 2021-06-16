@@ -33,7 +33,6 @@ If you have a running local instance of Neo4j, you can simply use the command be
 <br><br>
 <code>
 bin/neo4j-admin load --from=/data/mako.dump --database=neo4j --force
-exit 
 </code>
 
 <h5>Uploading dump file to a Docker container</h5>
@@ -114,6 +113,8 @@ From the bash shell, we call the neo4j-admin script and use it to restore the ne
 
 <code>
 bin/neo4j-admin load --from=/data/mako.dump --database=neo4j --force
+<br> 
+exit
 </code>
 <br><br>
 To measure the amount of time it takes to run the script, you can also call the below command instead. <br><br>
