@@ -7,7 +7,7 @@ lastmod: 2021-05-11T14:39:01+02:00
 draft: false
 images: []
 menu: 
-  manual:
+  installation:
     parent: "Installation"
 weight: 3
 toc: true

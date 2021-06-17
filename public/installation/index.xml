@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mako info on</title><link>https://ramellose.github.io/mako_docs/installation/</link><description>Recent content in Mako info on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://ramellose.github.io/mako_docs/installation/index.xml" rel="self" type="application/rss+xml"/><item><title>Conda</title><link>https://ramellose.github.io/mako_docs/installation/instructions/conda/</link><pubDate>Tue, 11 May 2021 14:39:07 +0200</pubDate><guid>https://ramellose.github.io/mako_docs/installation/instructions/conda/</guid><description>Conda environments including mako can be installed from the conda page: https://anaconda.org/ramellose/mako.
+To create a new environment including mako, the channel hosting mako, as well as the bioconda channels, need to be added first:
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --add channels ramellose
+The environment can then be created using conda:
+conda create -n myenv mako conda activate myenv
+After installation, you should be able to call mako:</description></item><item><title>Github</title><link>https://ramellose.github.io/mako_docs/installation/instructions/github/</link><pubDate>Tue, 11 May 2021 14:39:01 +0200</pubDate><guid>https://ramellose.github.io/mako_docs/installation/instructions/github/</guid><description>The latest version of mako can be downloaded from the Github page: https://github.com/ramellose/mako.
+To install mako from Github, you can use pip:
+python3 -m pip install git+https://github.com/ramellose/mako.git
+Note that mako has several dependencies that may need to be installed separately. Specifically, you need to have installed biom-format, a package required for reading BIOM files. If you have trouble installing these dependencies, please install mako using conda.
+After installation, you should be able to call mako:</description></item></channel></rss>
