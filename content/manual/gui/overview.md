@@ -13,7 +13,8 @@ weight: 301
 toc: true
 ---
 
-The GUI provides a graphical interface for most of the functionality of the CLI (Figure 2). 
+The GUI provides a graphical interface for most of the functionality of the CLI (Figure 2). The GUI interface largely follows the same structure as the CLI, meaning most CLI parameters are shown in the GUI and have a tooltip explaining the parameter choice.
+
 <figure>
   <img src="/images/gui.PNG" alt="Graphical user interface for mako." width="600"> 
   <figcaption>Figure 2: Graphical user interface for mako.</figcaption>
@@ -31,4 +32,14 @@ cd mako/mako
 python main_GUI.py
 </pre></code>
 
-The GUI commands largely follow the same structure as the CLI, meaning most CLI parameters are shown in the GUI and have a tooltip explaining the parameter choice.
+To install mako's dependencies, you can use the following commands for packages available through PyPi:
+<pre><code>
+python -m pip install neo4j
+</pre></code>
+
+Some packages may only be available through Github. In that case, you can install them as follows: 
+<pre><code>
+python -m pip install git+https://github.com/ramellose/manta.git
+</pre></code>
+
+
