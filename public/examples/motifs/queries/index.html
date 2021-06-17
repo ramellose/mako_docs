@@ -19,8 +19,7 @@ add_metadata(filepath=loc, location="../data/empo_annotation.tsv", driver=driver
 taxa_empo = dict.fromkeys(['Animal', 'Non-saline', 'Plant', 'Saline'])
 for val in taxa_empo:
     # first get experiments
-    query = "MATCH (:Property {name: 'empo_2'})-[QUALITY_OF {value: '" + val + \
-            "'}]-(:Experiment)--(:Specimen)--(b:Taxon) RETURN b"
+    query = "MATCH (:empo_2 {name: '" + val + "'})--(:Experiment)--(:Specimen)--(b:Taxon) RETURN b"
     taxa = driver.query(query)
     taxa_empo[val] = set([x['b']['name'] for x in taxa])
 </pre></code><p>The next section of code constructs a dictionary that we can use to store the results. For each of the EMPO_2 values, this dictionary contains another dictionary with keys ranging from 1 to 14. These numbers refer to the motifs.</p><pre><code>

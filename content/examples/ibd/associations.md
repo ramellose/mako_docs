@@ -17,6 +17,9 @@ Before we can upload any data to Neo4j, we first need to create the appropriate 
 Specifically, we need the following files: tab-delimited taxon abundance and lineage files, and an edge list that links microbes to metabolites. We will use the R package <a href="https://joey711.github.io/phyloseq/">phyloseq</a> to generate the first file and use <a href="https://cran.r-project.org/web/packages/Hmisc/Hmisc.pdf">Hmisc</a> to generate the correlations. 
 
 In an R environment, let's first load the necessary packages and files. Make sure your working directory is set to the location where you downloaded the files. 
+
+If you have not yet installed Hmisc, use <code>```install.packages("Hmisc")```</code> to install it. 
+
 <pre><code>
 library(Hmisc)
 

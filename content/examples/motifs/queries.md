@@ -36,8 +36,7 @@ First, we will use the driver to construct a dictionary that has the EMPO_2 file
 taxa_empo = dict.fromkeys(['Animal', 'Non-saline', 'Plant', 'Saline'])
 for val in taxa_empo:
     # first get experiments
-    query = "MATCH (:Property {name: 'empo_2'})-[QUALITY_OF {value: '" + val + \
-            "'}]-(:Experiment)--(:Specimen)--(b:Taxon) RETURN b"
+    query = "MATCH (:empo_2 {name: '" + val + "'})--(:Experiment)--(:Specimen)--(b:Taxon) RETURN b"
     taxa = driver.query(query)
     taxa_empo[val] = set([x['b']['name'] for x in taxa])
 </pre></code>
