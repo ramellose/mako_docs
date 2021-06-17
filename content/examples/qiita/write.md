@@ -48,6 +48,8 @@ docker stop neo4j
 
 Otherwise, use the command below to mount a folder named data and shut down the container after starting it. Make sure the data path matches the path to your dump file, so navigate to this location if applicable!
 
+{{< alert icon="👉" text="The Docker commands below are given as multi-line commands for clarity, but please use the single-line commands for copy-pasting." >}}
+
 For Windows:<br>
 <pre><code>
 docker run -d -v 
@@ -58,6 +60,11 @@ docker run -d -v
            --env NEO4J_AUTH=neo4j/test 
            neo4j:4.2.0
 </code></pre>
+
+<pre><code>
+docker run -d -v ./data:/data --publish=7475:7474 --publish=7688:7687 --name=neo4j --env NEO4J_AUTH=neo4j/test neo4j:4.2.0
+</code></pre>
+
 
 For Unix:<br>
 <pre><code>
@@ -70,6 +77,9 @@ docker run -d -v
            neo4j:4.2.0
 </code></pre>
 
+<pre><code>
+docker run -d -v data:/data --publish=7475:7474 --publish=7688:7687 --name=neo4j --env NEO4J_AUTH=neo4j/test neo4j:4.2.0
+</code></pre>
 Shut down the container:
 <pre><code>
 docker stop neo4j
@@ -99,6 +109,9 @@ docker run -i -v
            /bin/bash
 </code></pre>
 
+<pre><code>
+docker run -i -v ./data:/data --publish=7475:7474 --publish=7688:7687 -t neo4j /bin/bash
+</code></pre>
 For Unix:
 <pre><code>
 docker run -i -v 
@@ -108,6 +121,11 @@ docker run -i -v
            -t neo4j 
            /bin/bash
 </code></pre>
+
+<pre><code>
+docker run -i -v data:/data --publish=7475:7474 --publish=7688:7687 -t neo4j /bin/bash
+</code></pre>
+
 
 From the bash shell, we call the neo4j-admin script and use it to restore the neo4j database from the mako.dump file. 
 

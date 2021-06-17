@@ -20,6 +20,8 @@ Please make sure Docker can run on your machine using one of the above links. Ma
 
 After installing Docker (Desktop), the Neo4j Docker container can be setup. Each time you call the Docker container for Neo4j, a Neo4j Docker image is pulled from DockerHub and used to start a container. You can specify a range of commands to configure the Neo4j Docker image. For an expansive guide, please take a look at <a href="https://neo4j.com/developer/docker-run-neo4j/">the Neo4j Docker how-to</a>. 
 
+{{< alert icon="👉" text="The Docker command below is given as multil-ine fcommand or clarity, but please use the single-line command for copy-pasting." >}}
+
 <pre><code>
 docker run --rm 
            -d 
@@ -27,6 +29,11 @@ docker run --rm
            --name=neo4j 
            --env NEO4J_AUTH=neo4j/test 
            neo4j:latest
+</pre></code>
+
+Single-line:
+<pre><code>
+docker run --rm -d  --publish=7475:7474 --publish=7688:7687 --name=neo4j  --env NEO4J_AUTH=neo4j/test neo4j:latest
 </pre></code>
 
 The <code>--rm</code> flag tells Docker to clean up after exiting, while the <code>-d</code> flag means the Docker can be accessed separately. 

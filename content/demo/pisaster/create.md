@@ -13,7 +13,7 @@ weight: 5
 toc: true
 ---
 
-After connecting to the Neo4j database, the textbox at the top of the Neo4j Browser can be used to type Cypher queries and interact with the database. A Cypher query contains several clauses, <code>MERGE</code> being one of them. Each clause tells the DBMS what to do. In this case, the clauses tell the DBMS to unwind the list and match or create a node. Those nodes are then returned. 
+After connecting to the Neo4j database, the textbox at the top of the Neo4j Browser can be used to type Cypher queries and interact with the database. Click the blue triangle next to the textbox to run a query. A Cypher query contains several clauses, <code>MERGE</code> being one of them. Each clause tells the DBMS what to do. In this case, the clauses tell the DBMS to unwind the list and match or create a node. Those nodes are then returned. 
 For convenience, we will unwind a list of organism names (<code>WITH [], UNWIND</code>) and then use the <code>MERGE</code> query in combination with the unwound values to create all organisms. If an organism already exists, the <code>MERGE</code> query is equivalent to a <code>MATCH</code> query, meaning it just finds the node. 
 
 <pre><code>
@@ -31,6 +31,8 @@ The Neo4j Browser will automatically highlight the structure of the query (Figur
 </figure>
 
 Next, we create the relationships between the nodes. Because this is slightly more complicated and includes setting relationship properties, we will run a separate query for each relationship. Each query first finds the two organisms (<code>MATCH</code>) and then creates the relationship with number and calories values (<code>MERGE</code>). Again, these are returned if successful.  
+
+{{< alert icon="👉" text="The queries below need to be run one by one. " >}}
 
 <pre><code>
 MATCH (a:Organism {name: 'Pisaster'}), (b:Organism {name: 'Chitons'}) MERGE (a)-[r:PREYS_ON {number: 0.03, calories: 0.41}]-(b) RETURN a, b

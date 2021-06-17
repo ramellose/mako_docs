@@ -16,6 +16,8 @@ toc: true
 We can use the <a href="https://neo4j.com/developer/docker-run-neo4j/">Neo4j Docker</a> container to run Neo4j without needing to deal with a complicated setup. 
 For this demo, the following command was used to start the Docker container: 
 
+{{< alert icon="👉" text="The Docker command below is given as multi-line command for clarity, but please use the single-line command for copy-pasting." >}}
+
 <pre><code>
 docker run --rm -d 
            --publish=7475:7474 
@@ -23,6 +25,10 @@ docker run --rm -d
            --name=neo4j 
            --env NEO4J_AUTH=neo4j/test 
            neo4j:latest
+</code></pre>
+
+<pre><code>
+docker run --rm -d --publish=7475:7474 --publish=7688:7687 --name=neo4j --env NEO4J_AUTH=neo4j/test neo4j:latest
 </code></pre>
 
 We can navigate to the Neo4j Browser via the specified port: <a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>. To connect to Neo4j, we then fill in the rest of the information specified in the command; note that NEO4J_AUTH contains the username and password for the Neo4j database in the Docker container (Fig 3). Do not forget to change the port settings in the browser window, the neo4j or bolt connection needs to be set to 7688 rather than the default 7687. 
