@@ -18,16 +18,19 @@ Specifically, we need the following files: tab-delimited taxon abundance and lin
 
 In an R environment, let's first load the necessary packages and files. Make sure your working directory is set to the location where you downloaded the files. 
 
-If you have not yet installed Hmisc, use <code>```install.packages("Hmisc")```</code> to install it. 
+If you have not yet installed Hmisc, use <code>```install.packages("Hmisc")```</code> to install it. Please set the input and output filepaths to the locations where you stored your files. 
 
 <pre><code>
 library(Hmisc)
 
-ibd_lineages <- read.csv("ibd_lineages.csv", row.names="X")
-metabolite_features <- read.csv("ibd_metabolite_features.csv", row.names="X")
-metabolite_abundances <- read.csv("ibd_metabolite_abundances.csv", row.names="X")
-ibd_metadata <- read.csv("ibd_metadata.csv", row.names="X")
-ibd_taxa <- read.csv("ibd_taxa.csv", row.names="X")
+input <- "C:/Users/username/Input"
+output <- "C:/Users/username/Output"
+
+ibd_lineages <- read.csv(file.path(input, "ibd_lineages.csv"), row.names="X")
+metabolite_features <- read.csv(file.path(input, "ibd_metabolite_features.csv"), row.names="X")
+metabolite_abundances <- read.csv(file.path(input, "ibd_metabolite_abundances.csv"), row.names="X")
+ibd_metadata <- read.csv(file.path(input, "ibd_metadata.csv"), row.names="X")
+ibd_taxa <- read.csv(file.path(input, "ibd_taxa.csv"), row.names="X")
 </pre></code>
 
 We will remove healthy control samples from this file, since we are only interested in microbe-metabolite associations that occur in people with IBD. 
@@ -43,6 +46,8 @@ do some additional processing to use the results.
 First, we will flatten the matrices to make a data frame that contains taxa, metabolites and the strength of the correlation. For missing Spearman correlations, this causes a missing value that we later need to remove.  
 The <code>rcorr</code> function calculates all microbe-microbe and metabolite-metabolite correlations as well. Therefore, the next step is to filter these correlations; any correlation where the first position is present in the <code>metabolite_abundances</code> dataframe will be removed, while we can do the same for correlations where the second position is present in the <code>ibd_taxa</code> dataframe. We will only apply multiple-testing correction after all these irrelevant correlations are removed, so we are not correcting for tests that we only did out of convenience. 
 Since there are so many potential associations, we will correct for multiple testing and only use the remaining correlations. 
+
+{{< alert icon="👉" text="The rcorr function can take a long time to run." >}}
 
 <pre><code>
 results <- rcorr(t(ibd_taxa), t(metabolite_abundances), type="spearman")
@@ -70,9 +75,9 @@ chemclass <- chemclass[!is.na(chemclass$Chemical_class),]
 standardmatch <- data.frame(Metabolite=rownames(metabolite_features), Standard_match=metabolite_features$Standard.match)
 standardmatch <- standardmatch[!is.na(standardmatch$Standard_match),]
 
-write.table(corr_data, "microbe_metabolite.tsv", sep="\t", row.names=FALSE, quote=FALSE)
-write.table(data.frame("Species"=rownames(ibd_taxa), ibd_taxa), "ibd_taxa.tsv", sep="\t", row.names=FALSE, quote=FALSE)
-write.table(data.frame("Species"=rownames(ibd_lineages), ibd_lineages), "ibd_lineages.tsv", sep="\t", row.names=FALSE, quote=FALSE)
-write.table(chemclass, "chemclass.tsv", sep="\t", row.names=FALSE, quote=FALSE)
-write.table(standardmatch, "standardmatch.tsv", sep="\t", row.names=FALSE, quote=FALSE)
+write.table(corr_data, file.path(output, "microbe_metabolite.tsv"), sep="\t", row.names=FALSE, quote=FALSE)
+write.table(data.frame("Species"=rownames(ibd_taxa), ibd_taxa), file.path(output, "ibd_taxa.tsv"), sep="\t", row.names=FALSE, quote=FALSE)
+write.table(data.frame("Species"=rownames(ibd_lineages), ibd_lineages), file.path(output, "ibd_lineages.tsv"), sep="\t", row.names=FALSE, quote=FALSE)
+write.table(chemclass, file.path(output, "chemclass.tsv"), sep="\t", row.names=FALSE, quote=FALSE)
+write.table(standardmatch, file.path(output, "standardmatch.tsv"), sep="\t", row.names=FALSE, quote=FALSE)
 </pre></code>

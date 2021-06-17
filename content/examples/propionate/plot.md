@@ -21,7 +21,10 @@ To run <code>UpsetR</code>, we first need to process the data we collected previ
 library(UpSetR)
 library(viridis)
 
-data <- read.csv("propionate_matches.csv", row.names="X", stringsAsFactors=FALSE)
+input <- "C:/Users/username/Input"
+output <- "C:/Users/username/Output"
+
+data <- read.csv(file.path(input, "propionate_matches.csv"), row.names="X", stringsAsFactors=FALSE)
 
 upset_data <- data
 for (target in data$Sugar.degradation){
@@ -68,7 +71,7 @@ colours <- viridis(5)
 The last part is then to create the Upset plot and save it to a PDF file. 
 
 <pre><code>
-pdf(file="Figure2b_propionate_matches.pdf", width=6, height=5, onefile=FALSE) 
+pdf(file=file.path(output, "Figure2b_propionate_matches.pdf"), width=6, height=5, onefile=FALSE) 
 upset(upset_data, nsets=20, 
       set.metadata = list(data=metadata, 
       plots=list(list(type="matrix_rows", column="Substrate", alpha=0.5,

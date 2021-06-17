@@ -12,11 +12,12 @@ menu:
 weight: 303
 toc: true
 ---
+Find all Python code used on this page here: <a href="https://ramellose.github.io/mako_docs/demo/metalit_setup.py">metalit_setup.py</a><br>
 
 Before we can upload the literature network to Neo4j, we first need to create the appropriate files to upload. 
 Specifically, we need to convert the XML file to a metadata file that can be imported easily. We also need to make sure the taxon identifiers match. The NJS16 network only has species identifiers, not the full taxonomy, so we will take the taxonomy of nodes in the association network and match this to the NJS16 identifiers. 
 
-In an Python environment, let's first load the necessary packages and files. Make sure to set the <code>loc</code> parameter to the location where you stored the files. 
+First load the necessary packages and files through a Python interpreter. Make sure to set the <code>loc</code> parameter to the location where you stored the files. For instructions on starting a Python interpreter, please see the <a href="https://ramellose.github.io/mako_docs/manual/api/python/">API section of the manual</a>. 
 
 <pre><code>
 import networkx as nx

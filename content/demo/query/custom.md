@@ -13,6 +13,7 @@ weight: 203
 toc: true
 ---
 
+Find all Python code used on this page here: <a href="https://ramellose.github.io/mako_docs/demo/custom_queries.py">custom_queries.py</a><br><br>
 All of mako's driver classes are able to use the functions that call custom queries, so there is no need to close and recreate the driver to use these functions; however, for the sake of simplicity, the code below calls the <code>ParentDriver</code> class. 
 
 First, we need to start up the driver and connect to the database. 

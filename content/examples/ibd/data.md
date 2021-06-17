@@ -12,10 +12,11 @@ menu:
 weight: 204
 toc: true
 ---
+Find all Python code used on this page here: <a href="https://ramellose.github.io/mako_docs/demo/ibd_data.py">ibd_data.py</a><br>
 
 Now that we have uploaded all our data to a Neo4j database, it becomes rather straightforward to identify taxa with the most associations to certain metabolites or specific classes of chemicals. Keep in mind that only the metadata for metabolite clusters in our correlation file were uploaded; therefore, some clusters and their related metadata are not currently included. Regardless, we can take a closer look at some metabolites that Franzosa et al. (2019) found in their study. Specifically, they found that bile acids and sphingolipids were enriched in patients with IBD. In our Neo4j database, all metabolite clusters that contain bile acids should be connected to the <code>Chemical_class</code> node with the name <code>Bile acids, alcohols and derivatives</code>, while clusters that contain sphingolipids should be connected to the <code>Chemical_class</code> node with the name <code>Sphingolipids</code>. 
 
-For convenience, we will run our queries from a mako driver, but you can also run them directly from the Neo4j Browser to visualize them. The script below sets up a mako driver. 
+For convenience, we will run our queries from a mako driver, but you can also run them directly from the Neo4j Browser to visualize them. The script below sets up a mako driver. For instructions on starting a Python interpreter so you can call the driver, please see the <a href="https://ramellose.github.io/mako_docs/manual/api/python/">API section of the manual</a>. 
 
 <pre><code>
 import os

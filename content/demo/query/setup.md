@@ -12,10 +12,11 @@ menu:
 weight: 202
 toc: true
 ---
+Find all Python code used on this page here: <a href="https://ramellose.github.io/mako_docs/demo/custom_setup.py">custom_setup.py</a><br>
 
 Before we can write any queries, the database needs to be populated first. We will use the BIOM and graphml files from the Code Ocean capsule here. You can replace these with any other BIOM or graphml file of your choice, like the demo data in <a href="../vignette/intro">the vignette</a>. 
 
-First, we load all software packages and collect all the file paths of the files we want to write to the database. 
+First, we load all software packages and collect all the file paths of the files we want to write to the database. For instructions on starting a Python interpreter, please see the <a href="https://ramellose.github.io/mako_docs/manual/api/python/">API section of the manual</a>. 
 <pre><code>
 import biom
 import networkx as nx

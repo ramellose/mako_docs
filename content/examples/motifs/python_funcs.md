@@ -106,4 +106,4 @@ def count_motifs_empo(query, driver, tax_dict, count_dict, i):
     return count_dict
 </pre></code>
 
-Together, these functions are sufficient to get the number of unique motifs per EMPO_2 annotation. 
+Together, these functions are sufficient to get the number of unique motifs per EMPO_2 annotation. Copy and paste the functions into an active Python interpreter to use them. For instructions on starting a Python interpreter, please see the <a href="https://ramellose.github.io/mako_docs/manual/api/python/">API section of the manual</a>. 

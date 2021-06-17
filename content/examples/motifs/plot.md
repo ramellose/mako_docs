@@ -22,7 +22,10 @@ library(ggplot2)
 library(reshape2)
 library(viridis)
 
-data <- read.csv("empo_motifs.csv", sep=',')
+input <- "C:/Users/username/Input"
+output <- "C:/Users/username/Output"
+
+data <- read.csv(file.path(input, "empo_motifs.csv"), sep=',')
 data$X <- factor(data$X, levels=data$X)
 barplot <- melt(data, id="X")
 barplot$variable <- as.character(barplot$variable)
@@ -35,7 +38,7 @@ barplot$variable <- factor(barplot$variable, levels=c("Animal",
 motif_plot <- ggplot(barplot, aes(fill=variable, y=value, x=X)) + geom_bar(position="dodge", stat="identity") + 
               theme_minimal() + scale_fill_viridis(discrete=T) + facet_wrap(~variable, nrow=4, scales="free") + 
               labs(x='', y='', fill='') + theme(legend.position="none") 
-ggsave("Figure2a_motif_empo.pdf", plot=motif_plot, width=4.8, height=6, dpi=300) 
+ggsave(file.path(output, "Figure2a_motif_empo.pdf"), plot=motif_plot, width=4.8, height=6, dpi=300) 
 </pre></code>
 
 The results should look similar to the image below, although these motif counts are only shown for 5 Animal data sets. For mako's presentation, we later manually added motif images instead of the numbers, using the motifs shown in <a href="../intro">the introduction of this case study</a>. 

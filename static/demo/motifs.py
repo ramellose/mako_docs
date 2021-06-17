@@ -1,29 +1,63 @@
----
-title: "Queries"
-description: ""
-lead: ""
-date: 2021-04-29T13:43:56+02:00
-lastmod: 2021-04-29T13:43:56+02:00
-draft: false
-images: []
-menu: 
-  examples:
-    parent: "Motifs"
-weight: 503
-toc: true
----
-Find all Python code used on this page here: <a href="https://ramellose.github.io/mako_docs/demo/motifs.py">motifs.py</a><br>
-
-After defining the functions, we can run the complete script to get the EMPO annotations and access the queries. Specifically, we need to define three types of queries: we need to find all 3-node cliques, we need to find all 4-node cliques and we need to be able to filter these on weight. However, we'll need to upload the EMPO_2 annotations first. 
-We can use the <code>add_metadata</code> function to do this; we need to provide a tsv file to do this. This file has Experiment nodes as one column and their EMPO_2 annotation as the other column, with Experiment and EMPO_2 as column header. 
-
-For instructions on starting a Python interpreter, please see the <a href="https://ramellose.github.io/mako_docs/manual/api/python/">API section of the manual</a>. 
-
-<pre><code>
 import os
 import pandas as pd
 from mako.scripts.io import IoDriver, add_metadata
 
+def get_unique_patterns(query_result):
+    """
+    Sorts all node names,
+    then returns a set of tuples with only unique node names.
+    :param query_result: Neo4j query outcome (list of dictionaries)
+    :return:
+    """
+    all_motifs = [[y['name'] for y in x['p'] if type(y) == dict] for x in query_result]
+    if 'q' in query_result[0]:
+        for i in range(len(all_motifs)):
+            all_motifs[i].extend([y['name'] for y in query_result[i]['q'] if type(y) == dict])
+            all_motifs[i].extend([y['name'] for y in query_result[i]['r'] if type(y) == dict])
+    for y in all_motifs:
+        y.sort()
+    # the duplicated first node is variable,
+    # need to use set() to filter this
+    # otherwise each pattern with
+    # a different duplicate node is recognized as unique
+    all_motifs = [set(x) for x in all_motifs]
+    all_motifs = set(map(tuple, all_motifs))
+    return all_motifs
+
+def count_motifs_empo(query, driver, tax_dict, count_dict, i):
+    """
+    Takes a query, the driver and two dictionaries,
+    outputs number of unique query results per EMPO assignment
+    :param query:
+    :param driver:
+    :param tax_dict: dictionary with taxa belonging to an EMPO_2 annotation
+    :param count_dict: dictionary with e
+    :param i: key for count_dict that is currently applicable
+    :return:
+    """
+    motifs = driver.query(query)
+    # this means the motif only contains edges
+    if len(motifs) == 0:
+        return count_dict
+    if 'j' in motifs[0]:
+        unique_edges = dict.fromkeys([x['j']['name'] for x in motifs])
+        for motif in motifs:
+            edge = motif['j']['name']
+            taxon = motif['i']['name']
+            for empo in tax_dict:
+                if taxon in tax_dict[empo]:
+                    unique_edges[edge] = empo
+        for edge in unique_edges:
+            count_dict[unique_edges[edge]][i] += 1
+    if 'p' in motifs[0]:
+        motifs = get_unique_patterns(motifs)
+        for link in motifs:
+            for empo in tax_dict:
+                match = [x for x in link if x in tax_dict[empo]]
+                if len(match) > 0:
+                    count_dict[empo][i] += 1
+    return count_dict
+	
 loc = os.getcwd()
 
 driver = IoDriver(uri='neo4j://localhost:7688',
@@ -32,31 +66,20 @@ driver = IoDriver(uri='neo4j://localhost:7688',
                     filepath=loc,
                     encrypted=False)
 add_metadata(filepath=loc, location="../data/empo_annotation.tsv", driver=driver)
-</pre></code>
 
-First, we will use the driver to construct a dictionary that has the EMPO_2 files as keys and a list of taxa belonging to that EMPO_2 annotation as values. 
-
-<pre><code>
 taxa_empo = dict.fromkeys(['Animal', 'Non-saline', 'Plant', 'Saline'])
 for val in taxa_empo:
     # first get experiments
     query = "MATCH (:empo_2 {name: '" + val + "'})--(:Experiment)--(:Specimen)--(b:Taxon) RETURN b"
     taxa = driver.query(query)
     taxa_empo[val] = set([x['b']['name'] for x in taxa])
-</pre></code>
 
-The next section of code constructs a dictionary that we can use to store the results. For each of the EMPO_2 values, this dictionary contains another dictionary with keys ranging from 1 to 14. These numbers refer to the motifs. 
-
-<pre><code>
 count_dict = dict()
 for val in ['Animal', 'Non-saline', 'Plant', 'Saline']:
     count_dict[val] = dict.fromkeys(list(range(1,14)))
     for num in count_dict[val]:
         count_dict[val][num] = 0
-</pre></code>
 
-Next, we will find all posivitively- and negatively-weighted edges. While we could include the EMPO_2 annotation in the query, this would take a bit more time. Therefore, we will first query all edges and then use our EMPO_2 dictionary to assign them to different EMPO terms. 
-<pre><code>
 count_dict = count_motifs_empo(query="MATCH (j:Edge)--(i:Taxon) WHERE j.weight > 0 RETURN j, i",
                             driver=driver, tax_dict=taxa_empo,
                             count_dict=count_dict, i=1)
@@ -66,21 +89,12 @@ count_dict = count_motifs_empo(query="MATCH (j:Edge)--(i:Taxon) WHERE j.weight <
                             driver=driver, tax_dict=taxa_empo,
                             count_dict=count_dict, i=2)
 print("Found all negatively-weighted edges...")
-</pre></code>
-
-Next, we can look at the motifs. In this case, we are defining a three-node clique through a linear pattern. However, to do this, we need to specify four nodes, like so: A--B--C--A. Otherwise, we would miss the edge between C and A. To specify this in the query, we assign a variable <code>a</code> to the first and last node specified in the pattern; because we cannot reassign a variable within a pattern, this therefore presumes that <code>a</code> must be the same node in both positions. 
-
-<pre><code>
+	
 # unweighted 3-node motif
 count_dict = count_motifs_empo(query="MATCH p=(a:Taxon)--(:Edge)--(:Taxon)--(:Edge)--(:Taxon)--(:Edge)--(a) RETURN p",
                             driver=driver, tax_dict=taxa_empo,
                             count_dict=count_dict, i=3)
-print("Collected unweighted 3-node motifs...")
-</pre></code>
-
-Next, we can start looking at motifs with specific combinations of edge weights. We do this by assigning a variable to each edge and stating that the edge weight must be above or below a certain value. 
-
-<pre><code>
+print("Collected unweighted 3-node motifs...")	
 # weighted 3-node motif +++
 query = "MATCH p=(a:Taxon)--(x:Edge)--(:Taxon)--(y:Edge)--(:Taxon)--(z:Edge)--(a) " \
         "WHERE x.weight > 0 AND y.weight > 0 AND z.weight > 0 RETURN p"
@@ -112,11 +126,7 @@ count_dict = count_motifs_empo(query=query,
                             driver=driver, tax_dict=taxa_empo,
                             count_dict=count_dict, i=7)
 print("Collected weighted 3-node motif +--...")
-</pre></code>
 
-For 4-node cliques, the query is a bit more complicated. This is because we would need to draw a single path through the clique to specify it in one line, which could get quite long. Instead, we chose to split up the query in two parts, so the first part <code>p</code> of the query specifies four nodes that need to be connected in a cycle (A--B--C--D--A), while the second and third parts <code>q</code> and <code>r</code> of the query specify the remaining connections between those four nodes, like (A--C) and (B--D). 
-
-<pre><code>
 # unweighted 4-node motif
 query = "MATCH p=(a:Taxon)--(:Edge)--(b:Taxon)-" \
         "-(:Edge)--(c:Taxon)--(:Edge)--(d:Taxon)-" \
@@ -127,11 +137,6 @@ count_dict = count_motifs_empo(query=query,
                             driver=driver, tax_dict=taxa_empo,
                             count_dict=count_dict, i=8)
 print("Collected unweighted 4-node motifs...")
-</pre></code>
-
-Just like before, this query can be extended to filter on edge weights. 
-
-<pre><code>
 # weighted 4-node motif ++++++
 query = "MATCH p=(a:Taxon)--(u:Edge)--(b:Taxon)-" \
         "-(v:Edge)--(c:Taxon)--(w:Edge)--(d:Taxon)-" \
@@ -198,12 +203,11 @@ count_dict = count_motifs_empo(query=query,
                             count_dict=count_dict, i=13)
 
 print("Collected weighted 4-node motif +++++-...")
-</pre></code>
 
-All that is left, is to use pandas to convert the dictionary to a dataframe that can be written to a csv file!
-
-<pre><code>
 count_data = pd.DataFrame(count_dict)
 count_data.to_csv(loc + "//empo_motifs.csv")
-</pre></code>
-  
+
+
+if __name__ == '__main__':
+    main()
+    print("Completed motif identification.")

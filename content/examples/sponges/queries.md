@@ -12,6 +12,7 @@ menu:
 weight: 103
 toc: true
 ---
+Find all Python code used on this page here: <a href="https://ramellose.github.io/mako_docs/demo/sponge_queries.py">sponge_queries.py</a><br>
 
 With all networks and the HMA-LMA links available via the Neo4j database, we can start considering associations that could be linked to HMA-LMA status. For example, we might try to recover all associations between taxa that are both associated to HMA status in some way, with the query below:
 
@@ -21,7 +22,7 @@ MATCH p=(:Type {name: 'HMA'})--()--(:Taxon)--(:Edge)--(:Taxon)--()--(:Type {name
 
 This query first matches the HMA node and then passes through either a <code>Class</code> or <code>Phylum</code> node to connect to an association, which should similarly be connected to the HMA node. 
 
-If we want to export the subgraph of HMA and LMA associations to Cytoscape, we can adapt the above query to connect associations to a new network node. The easiest way to do this, is via the mako API. Make sure to adjust the driver configuration settings for your instance of Neo4j. 
+If we want to export the subgraph of HMA and LMA associations to Cytoscape, we can adapt the above query to connect associations to a new network node. The easiest way to do this, is via the mako API, which you can access via a Python interpreter. For instructions on starting the interpreter, please see the <a href="https://ramellose.github.io/mako_docs/manual/api/python/">API section of the manual</a>.  Make sure to adjust the driver configuration settings for your instance of Neo4j. 
 
 
 <pre><code>

@@ -26,7 +26,7 @@ The dump file can be written both to a local Neo4j database, and to a Docker fil
 
 Keep in mind that you need to use a Neo4j version equal to the version that the database was created in, in this case 4.2.0. With the Docker command, you will automatically download and start the correct version. Otherwise, you can select the button in the left bottom corner of the Neo4j Browser to see which version you are running. 
 
-When you change Neo4j versions, the browser cache may cause you to load an older version of the Neo4j Browser. Make sure to clear your cache in between switching versions. The exact steps for clearing your browser cache vary per browser. 
+{{< alert icon="👉" text="When you change Neo4j versions, the browser cache may cause you to load an older version of the Neo4j Browser. Make sure to clear your cache in between switching versions. The exact steps for clearing your browser cache vary per browser." >}}
 
 <h5>Writing the dump file to a local Neo4j database</h5>
 If you have a running local instance of Neo4j, you can simply use the command below from the neo4j folder. Make sure to adapt the --from file path to the file path where you have saved the mako.dump file.
