@@ -13,7 +13,9 @@ weight: 402
 toc: true
 ---
 
-First, download the mako.dump file from <a href="https://github.com/ramellose/mako/releases">the mako releases page</a>. This file was created by uploading 60 BIOM files and network files to the Neo4j database and then using neo4j-admin to create a dump file. Such a file is much faster to restore a complete database. Save the file to a folder named <b>data</b>, then navigate to the folder containing the data folder on your command line. See the screenshot below for an example data folder in Ubuntu. 
+First, download the mako.dump file from <a href="https://github.com/ramellose/mako/releases">the mako releases page</a>. At the time of writing, the last release of a dump file can be found here: <a href="https://github.com/ramellose/mako/releases/tag/v0.2.1">release 0.2.1</a>. This file was created by uploading 60 BIOM files and network files to the Neo4j database and then using neo4j-admin to create a dump file. Such a file is much faster to restore a complete database. 
+
+{{< alert icon="👉" text="Save the mako.dump file in a folder named data. Run the Docker container from the folder <b>containing</b> the data folder." >}}
 
 <figure>
   <img src="/images/filepath.PNG" alt="Screenshot with mako.dump file location." width="600"> 
@@ -66,7 +68,7 @@ docker run -d -v ./data:/data --publish=7475:7474 --publish=7688:7687 --name=neo
 </code></pre>
 
 
-For Unix:<br>
+For Linux and MacOS:<br>
 <pre><code>
 docker run -d -v 
            data:/data 
@@ -92,7 +94,7 @@ For Windows:<br>
 docker cp ./data/mako.dump neo4j:/data/mako.dump
 </code>
 
-For Unix:<br>
+For Linux and MacOS:<br>
 <code>
 docker cp data/mako.dump neo4j:/data/mako.dump
 </code>
@@ -112,7 +114,7 @@ docker run -i -v
 <pre><code>
 docker run -i -v ./data:/data --publish=7475:7474 --publish=7688:7687 -t neo4j /bin/bash
 </code></pre>
-For Unix:
+For Linux and MacOS:
 <pre><code>
 docker run -i -v 
            data:/data 
@@ -140,7 +142,10 @@ To measure the amount of time it takes to run the script, you can also call the 
 %SECONDS=0 ; bin/neo4j-admin load --from=/data/mako.dump --database=neo4j --force ; echo $SECONDS
 </code>
 <br><br>
-Finally, we can restart the Docker container. Give it a minute or two to restore the database; afterwards, you should be able to interact with it via the Neo4j Browser at <a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>. Make sure to fill in the correct credentials when you log in to the database. 
+Finally, we can restart the Docker container. Give it a minute or two to restore the database; afterwards, you should be able to interact with it via the Neo4j Browser at <a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>. Set the address to <code>localhost:7688</code>, the username to <code>neo4j</code> and the password to <code>test</code> to connect. 
+
+{{< alert icon="👉" text="If the Neo4j Browser returns a blank webpage, please clear your browser cache; this can happen when switching between Neo4j versions." >}}
+
 <br><br>
 <code>
 docker start neo4j

@@ -9,4 +9,5 @@ After installation, you should be able to call mako:</description></item><item><
 To install mako from Github, you can use pip:
 python3 -m pip install git+https://github.com/ramellose/mako.git
 Note that mako has several dependencies that may need to be installed separately. Specifically, you need to have installed biom-format, a package required for reading BIOM files. If you have trouble installing these dependencies, please install mako using conda.
-After installation, you should be able to call mako:</description></item></channel></rss>
+After installation, you should be able to call mako:</description></item><item><title>Code Ocean</title><link>https://ramellose.github.io/mako_docs/installation/instructions/codeocean/</link><pubDate>Tue, 11 May 2021 14:39:07 +0200</pubDate><guid>https://ramellose.github.io/mako_docs/installation/instructions/codeocean/</guid><description>Access the Code Ocean capsule here.
+The mako package and the database used to present this package can also be accessed via Code Ocean. If you use mako this way, you will not need to install any of the dependencies; however, the Code Ocean capsule needs to set up the Neo4j database for each use and this can be time-consuming. The capsule is therefore suitable for trying out mako and Neo4j, but less so for running specific analyses.</description></item></channel></rss>

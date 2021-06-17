@@ -22,10 +22,10 @@ The database schema used by mako was designed to meet several demands:
     <li>Flexible inclusion of metadata</li>
 </ul>
 
-As a result, each of the items always present in networks and BIOM files have their own node label and can more easily be accessed. In contrast, property nodes are more flexible and can be connected to any other node. The complete schema, sufficient to import BIOM files and network files, therefore specifies both standard node types and node relationships (Figure 1). 
+The complete schema, sufficient to import BIOM files and network files, therefore specifies both standard node types and node relationships (Figure 1). 
 
 <div id="labeldata", style="height:150px; border:3px solid black; padding:10px">
-<span id="labelspan"> <a href="https://www.ebi.ac.uk/ols/ontologies/ncit">Find the complete NCI Thesaurus here.</a> </span></div>
+<span id="labelspan"> <a href="https://www.ebi.ac.uk/ols/ontologies/ncit">Find the complete NCI Thesaurus here.</a> Zoom and drag to move the schema and click the nodes to see their NCIt definitions. </span></div>
 
 <div id="mynetwork", style="height:500px"></div>
 
