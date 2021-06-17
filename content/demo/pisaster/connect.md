@@ -16,7 +16,7 @@ toc: true
 We can use the <a href="https://neo4j.com/developer/docker-run-neo4j/">Neo4j Docker</a> container to run Neo4j without needing to deal with a complicated setup. 
 For this demo, the following command was used to start the Docker container: 
 
-{{< alert icon="👉" text="The Docker command below is given as multi-line command for clarity, but please use the single-line command for copy-pasting." >}}
+{{< alert icon="👉" text="The Docker command below is given as ma ulti-line command for clarity, but please use the single-line command for copy-pasting." >}}
 
 <pre><code>
 docker run --rm -d 

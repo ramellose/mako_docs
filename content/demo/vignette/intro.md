@@ -16,7 +16,11 @@ toc: true
 In this vignette, several of mako's functions will briefly be introduced with an example data set consisting of only 5 taxa and 20 samples. This data set is simple enough that most relevant nodes can be visualized in Neo4j Browser, making it feasible to follow along with all of mako's operations. 
 
 The tables below give an overview of the data contained in the BIOM file. 
-The file and associated networks can be downloaded from <a href="https://github.com/ramellose/mako/tree/master/docs">the mako Github repository</a>. 
+
+Download the files here:<br>
+<a href="https://ramellose.github.io/mako_docs/demo/demo.biom">demo.biom</a><br>
+<a href="https://ramellose.github.io/mako_docs/demo/demo_1.graphml">demo_1.graphml</a><br>
+<a href="https://ramellose.github.io/mako_docs/demo/demo_2.graphml">demo_2.graphml</a><br>
 
 Count table:
  OTU   | Sample1  | Sample2  | ... | Sample20 |
