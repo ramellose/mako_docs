@@ -48,7 +48,7 @@ vals = counts.values()
 plt.bar(labels, vals)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig(fname="loc/sphingolipid_barplot.png")
+plt.savefig(fname=loc + "/sphingolipid_barplot.png")
 </pre></code><figure><img src=https://ramellose.github.io/mako_docs/images/ibd_families.PNG alt="Bar plot showing number of correlations to sphingolipid metabolite clusters for different microbial families." width=600><figcaption>Figure 2: Bar plot showing number of correlations to sphingolipid metabolite clusters for different microbial families.</figcaption></figure><p>In this case, we were the most interested in the number of families with associations to sphingolipid clusters. However, we can also look at metabolic diversity in general. Which taxonomic families had the most diverse correlations, meaning they were connected to the largest number of metabolite classes?</p><pre><code>
 query = 'MATCH p=(:Family)--(:Taxon)--(:Metabolite)--(:Chemical_class) RETURN p'
 results = driver.query(query)

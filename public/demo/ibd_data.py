@@ -11,8 +11,7 @@ def main():
                         password='test',
                         filepath=loc,
                         encrypted=False)
-
-      query = 'MATCH p=(:Taxon)--(:Metabolite)--(:Chemical_class {name: "Sphingolipids"}) RETURN p'
+    query = 'MATCH p=(:Taxon)--(:Metabolite)--(:Chemical_class {name: "Sphingolipids"}) RETURN p'
     results = driver.query(query)
     print(len(results))
 
@@ -40,7 +39,7 @@ def main():
     plt.bar(labels, vals)
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig(fname="loc/sphingolipid_barplot.png")
+    plt.savefig(fname= loc + "/sphingolipid_barplot.png")
 
     query = 'MATCH p=(:Family)--(:Taxon)--(:Metabolite)--(:Chemical_class) RETURN p'
     results = driver.query(query)

@@ -76,7 +76,7 @@ vals = counts.values()
 plt.bar(labels, vals)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig(fname="loc/sphingolipid_barplot.png")
+plt.savefig(fname=loc + "/sphingolipid_barplot.png")
 </pre></code>
 
 <figure>
