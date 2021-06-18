@@ -55,6 +55,7 @@ results = driver.query(query)
 # Make an empty dictionary to store all chemical classes in
 family_results = {x['p'][0]['name']: [] for x in results}
 # For each matched pattern (one per metabolite cluster), add the chemical class
+# Press enter twice to terminate the for loop if running from an interpreter
 for result in results:
     family_results[result['p'][0]['name']].append(result['p'][6]['name'])
 # Take the set of results so only unique chemical classes remain
