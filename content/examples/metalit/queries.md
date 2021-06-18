@@ -140,3 +140,5 @@ After we format the network, we can see that there is indeed a small number of a
   <img src="/images/lit_subnetwork.PNG" alt="Network with associations linked to degradation of starch and production of butyrate. Negatively-weighted associations are shown in blue, positively-weighted ones in red." width="600"> 
   <figcaption>Figure 5: Network with associations linked to degradation of starch and production of butyrate. Negatively-weighted associations are shown in blue, positively-weighted ones in red.</figcaption>
 </figure>
+
+{{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}

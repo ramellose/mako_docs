@@ -105,3 +105,5 @@ print(query_results)
 
 []
 </code></pre>
+
+{{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}

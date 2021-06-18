@@ -89,3 +89,5 @@ The results should look similar to the image below, although these values are on
   <img src="/images/propionate.png" alt="An Upset plot showing counts of propionate associations for five gut microbiome studies." width="400"> 
   <figcaption>Figure 1: Counts of propionate associations for five gut microbiome studies.</figcaption>
 </figure>
+
+{{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}

@@ -22,6 +22,7 @@ MATCH p=(:Type {name: 'HMA'})--()--(:Taxon)--(:Edge)--(:Taxon)--()--(:Type {name
 
 This query first matches the HMA node and then passes through either a <code>Class</code> or <code>Phylum</code> node to connect to an association, which should similarly be connected to the HMA node. 
 
+Cytoscape is an open source platform for visualizing networks; if you have not yet installed it, download it from the <a href="https://cytoscape.org/"> Cytoscape homepage</a>. 
 If we want to export the subgraph of HMA and LMA associations to Cytoscape, we can adapt the above query to connect associations to a new network node. The easiest way to do this, is via the mako API, which you can access via a Python interpreter. For instructions on starting the interpreter, please see the <a href="https://ramellose.github.io/mako_docs/manual/api/python/">API section of the manual</a>.  Make sure to adjust the driver configuration settings for your instance of Neo4j. 
 
 

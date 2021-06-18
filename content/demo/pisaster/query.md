@@ -33,3 +33,5 @@ Since the relationships are directed, there is not even truly a need to specify 
 <pre><code>MATCH (a)-[r]->(b) WHERE r.calories > 0.20 RETURN b LIMIT 50 </code></pre>
 
 Explaining the full potential of Cypher is not within the scope of this short guide. Note that many other clauses have not been addressed here, such as CREATE. For a complete overview of Cypher, we refer to the <a href="https://neo4j.com/docs/cypher-manual/current/">Neo4j manual</a>. For explanations of the mako data schema and related queries, please visit <a href="https://ramellose.github.io/mako_docs/cypher/introduction/intro/"the Cypher page of this website.</a> 
+
+{{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}

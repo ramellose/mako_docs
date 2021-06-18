@@ -76,6 +76,7 @@ vals = counts.values()
 plt.bar(labels, vals)
 plt.xticks(rotation=45)
 plt.tight_layout()
+plt.savefig(fname="loc/sphingolipid_barplot.png")
 </pre></code>
 
 <figure>
@@ -91,6 +92,7 @@ results = driver.query(query)
 # Make an empty dictionary to store all chemical classes in
 family_results = {x['p'][0]['name']: [] for x in results}
 # For each matched pattern (one per metabolite cluster), add the chemical class
+# Press enter twice to terminate the for loop if running from an interpreter
 for result in results:
     family_results[result['p'][0]['name']].append(result['p'][6]['name'])
 # Take the set of results so only unique chemical classes remain
@@ -105,3 +107,5 @@ print(count_results)
 It looks like Ruminococcaceae had the most associations to different chemical classes in this dataset, but increased relative abundance of other microbial families was also linked to hundreds of classes of chemicals. <br>
 
 In this case study, mako was used to add non-standard metabolite data to a Neo4j database. As demonstrated, we can upload any sort of additional data by formatting it appropriately, making it straightforward to include in our queries. Here, we only worked with a relatively simple dataset. However, for large meta-analytical approaches, microbe-metabolite networks like this could be used to investigate microbe-microbe networks in more detail. 
+
+{{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}

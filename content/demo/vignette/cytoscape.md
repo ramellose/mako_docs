@@ -13,7 +13,7 @@ weight: 108
 toc: true
 ---
 
-Instead of working with the Neo4j database directly, it is also possible to export a specific network to a graphml file or to a running Cytoscape instance with the commands below. Specify the target network with the <code>-net</code> flag. The new network is exported to the specified file path in <code>-fp</code>. The <code>-cyto</code> flag is used to tell mako to export the network to Cytoscape as well. 
+Instead of working with the Neo4j database directly, it is also possible to export a specific network to a graphml file or to a running Cytoscape instance with the commands below. Cytoscape is an open source platform for visualizing networks; if you have not yet installed it, download it from the <a href="https://cytoscape.org/"> Cytoscape homepage</a>. Specify the target network with the <code>-net</code> flag. The new network is exported to the specified file path in <code>-fp</code>. The <code>-cyto</code> flag is used to tell mako to export the network to Cytoscape as well. 
 
 {{< alert icon="👉" text="To export a network to Cytoscape, make sure Cytoscape is running first!" >}}
 
@@ -24,3 +24,5 @@ Instead of working with the Neo4j database directly, it is also possible to expo
   <img src="/images/demo_6.PNG" alt="Cytoscape with a network imported from Neo4j." width="600"> 
   <figcaption>Figure 6: Cytoscape with a network imported from Neo4j.</figcaption>
 </figure>
+
+{{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}

@@ -48,4 +48,5 @@ The results should look similar to the image below, although these motif counts 
   <figcaption>Figure 2: Motif counts for five gut microbiome studies.</figcaption>
 </figure>
 
+{{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}
 
