@@ -18,7 +18,7 @@ toc: true
 Mac and Windows users need to use <a href="https://www.docker.com/get-started">Docker Desktop</a>, while Linux users can run Docker containers after <a href="https://docs.docker.com/engine/install/ubuntu/">installing docker-engine</a>. 
 Please make sure Docker can run on your machine using one of the above links. Mac and Windows users also need to launch Docker Desktop after installation to start using Docker containers.
 
-After installing Docker (Desktop), the Neo4j Docker container can be setup. Each time you call the Docker container for Neo4j, a Neo4j Docker image is pulled from DockerHub and used to start a container. You can specify a range of commands to configure the Neo4j Docker image. For an expansive guide, please take a look at <a href="https://neo4j.com/developer/docker-run-neo4j/">the Neo4j Docker how-to</a>. 
+After installing Docker (Desktop), the Neo4j Docker container can be setup by running the commands below from a terminal. Each time you call the Docker container for Neo4j, a Neo4j Docker image is pulled from DockerHub and used to start a container. You can specify a range of commands to configure the Neo4j Docker image. For an expansive guide, please take a look at <a href="https://neo4j.com/developer/docker-run-neo4j/">the Neo4j Docker how-to</a>. 
 
 {{< alert icon="👉" text="The Docker command below is given as a multi-line command for clarity, but please use the single-line command for copy-pasting." >}}
 

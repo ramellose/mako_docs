@@ -13,7 +13,7 @@ weight: 104
 toc: true
 ---
 
-Navigate to the location where you downloaded the network files. Now, only the network files and the file path need to be provided. 
+From a terminal, navigate to the location where you downloaded the network files. Now, only the network files and the file path need to be provided. 
 
 <code>mako io -fp local_filepath -cf -net demo_1.graphml demo_2.graphml</code>
 

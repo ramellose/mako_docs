@@ -13,7 +13,7 @@ weight: 103
 toc: true
 ---
 
-Navigate to the location where you downloaded the BIOM file. By storing the config file, we can save ourselves the hassle of typing access information each time. For <code>-fp</code>, fill in the file path where the downloaded BIOM file is stored. 
+From a terminal, navigate to the location where you downloaded the BIOM file. By storing the config file, we can save ourselves the hassle of typing access information each time. For <code>-fp</code>, fill in the file path where the downloaded BIOM file is stored. 
 
 <code>mako neo4biom -fp local_filepath -cf -u neo4j -p test 
 -a bolt://localhost:7688 -biom demo.biom </code>
