@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quickstarts on</title><link>https://ramellose.github.io/mako_docs/quickstart/</link><description>Recent content in Quickstarts on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Mon, 10 May 2021 15:40:25 +0200</lastBuildDate><atom:link href="https://ramellose.github.io/mako_docs/quickstart/index.xml" rel="self" type="application/rss+xml"/><item><title>Quickstart</title><link>https://ramellose.github.io/mako_docs/quickstart/guide/</link><pubDate>Mon, 10 May 2021 15:40:25 +0200</pubDate><guid>https://ramellose.github.io/mako_docs/quickstart/guide/</guid><description>Set up a Neo4j database
-Click here for more details.
+Follow the instructions on Setting up Docker.
 Connect with Neo4j Browser
-Click here for more details.
+Follow the instructions on Neo4j Browser
 Write data to the Neo4j database
-Click here for installation instructions.
-Click here for more details.
+Follow the instructions on installing via Conda.
+Follow the instructions for the Sponges case study.
 Find microbial associations of interest
-Click here for more details.</description></item></channel></rss>
+Follow the instructions on working with Cypher.</description></item></channel></rss>
