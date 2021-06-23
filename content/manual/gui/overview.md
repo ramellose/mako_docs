@@ -21,7 +21,9 @@ The GUI provides a graphical interface for most of the functionality of the CLI 
 </figure>
 
 There are two ways to run the GUI: via executable or by installing mako and its dependencies locally. 
-You can download the executables from the <a href="https://github.com/ramellose/mako/releases">the mako releases page</a>. Releases that come with updated executables have them listed in the release description. Currently, executables are only available for Windows and Linux systems. 
+You can download the executables from the <a href="https://github.com/ramellose/mako/releases">mako releases page</a>. Releases that come with updated executables have them listed in the release description. Currently, executables are only available for Windows and Linux systems. 
+
+{{< alert icon="👉" text="The executables are the recommended method for running the GUI. The instructions below are for advanced users familiar with configuring their Python installations." >}}
 
 Alternatively, the the <code>main_GUI.py</code> script can be run directly to start the GUI. On Mac systems, this requires the mako package and all its dependencies to be installed to the local Python version. You may therefore have to download multiple dependencies manually. All dependencies can be found here: <a href="https://github.com/ramellose/mako/blob/master/meta.yaml">mako meta.yaml file with dependencies</a>. 
 
