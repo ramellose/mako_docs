@@ -13,7 +13,7 @@ weight: 504
 toc: true
 ---
 
-Because R has several wonderful libraries for visualizing data, we will import the csv file in R and generate a bar plot there. This script is relatively short; we just need to add <code>ggplot2</code> for the plot itself, <code>reshape2</code> for adjusting the data to a long format and <code>viridis</code> for using colorblind-friendly palettes. 
+Because R has several wonderful libraries for visualizing data, we will import the csv file in R and generate a bar plot there. This script is relatively short; we just need to add <code>ggplot2</code> for the plot itself, <code>reshape2</code> for adjusting the data to a long format and <code>viridis</code> for using colorblind-friendly palettes. Make sure to adapt the input and output parameters as well, to where your query results are stored. 
 
 Next, the script adds some necessary properties to the data, like making the EMPO_2 terms a factor. Finally, we use the <code>ggplot2 geom_bar</code> function to make a bar plot. 
 

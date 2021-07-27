@@ -22,4 +22,8 @@ We will use the following studies:
 - Swedish Infant Fecal Microbiome, ID 12021
 - Microbiota and body composition during the period of complementary feeding, ID 12716
 
-All studies can be found on mako's Code Ocean capsule as well: <a href="https://codeocean.com/capsule/0482418">mako capsule</a>. Navigate through the data folder to find these files. 
+Download the files here:<br>
+<a href="https://ramellose.github.io/mako_docs/demo/biomfiles.zip">biomfiles.zip</a><br>
+<a href="https://ramellose.github.io/mako_docs/demo/networks.zip">networks.zip</a><br>
+
+After downloading, unzip the files in folders named biomfiles and networks. 

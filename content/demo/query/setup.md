@@ -24,19 +24,19 @@ import os
 from mako.scripts.neo4biom import Biom2Neo
 from mako.scripts.io import IoDriver
 
-filepath = "C:/Users/username/demo/"
+filepath = "C:/Users/username/demo/" # change this to where you downloaded the files
 
-biom_filepaths = [filepath + "11766.biom", 
-                  filepath + "11888.biom", 
-                  filepath + "11947.biom",
-                  filepath + "12021.biom",
-                  filepath + "12716.biom"]
+biom_filepaths = [filepath + "biomfiles/11766.biom", 
+                  filepath + "biomfiles/11888.biom", 
+                  filepath + "biomfiles/11947.biom",
+                  filepath + "biomfiles/12021.biom",
+                  filepath + "biomfiles/12716.biom"]
                   
-network_filepaths = [filepath + "11766.graphml", 
-                     filepath + "11888.graphml", 
-                     filepath + "11947.graphml",
-                     filepath + "12021.graphml",
-                     filepath + "12716.graphml"]
+network_filepaths = [filepath + "networks/11766.graphml", 
+                     filepath + "networks/11888.graphml", 
+                     filepath + "networks/11947.graphml",
+                     filepath + "networks/12021.graphml",
+                     filepath + "networks/12716.graphml"]
 </pre></code>
 
 We will add the BIOM files first, so the next section imports the <code>Biom2Neo</code> driver, connects to the Neo4j database and then loops over the file paths to read the BIOM files and write them to the database. In this case, we are assuming that you are running Neo4j from the Docker container (<a href="../../neo4j/docker/docker/">link to Docker setup</a>), so we will use these connection settings. We use the filenames to set the experiment ID in the database. 

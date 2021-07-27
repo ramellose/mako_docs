@@ -18,11 +18,13 @@ Instead of working with the Neo4j database directly, it is also possible to expo
 {{< alert icon="👉" text="To export a network to Cytoscape, make sure Cytoscape is running first!" >}}
 
 
-<code>mako io -fp local_filepath -cf -net Genus_demo_1 -cyto -w</code>
+<code>mako io -fp . -cf -net Genus_demo_1 -cyto -w</code>
 
 <figure>
   <img src="/images/demo_6.PNG" alt="Cytoscape with a network imported from Neo4j." width="600"> 
   <figcaption>Figure 6: Cytoscape with a network imported from Neo4j.</figcaption>
 </figure>
+
+The Genus_demo_1 wnetwork as previously generated using the mako module; by specifying this network name, it is possible to export the network to Cytoscape. When doing so, mako converts the Neo4j representation of the network to a conventional network representation where edges are only relationships between nodes (Figure 6). 
 
 {{< alert icon="👉" text="To clear the database for future use, run the query MATCH (n) DETACH DELETE n." >}}

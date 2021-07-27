@@ -32,3 +32,10 @@ After installation, you should be able to call mako:
 <pre><code>
 mako -h
 </pre></code>
+
+If you are unable to run the mako –h command, please check your installation logs to see whether mako was downloaded from the correct source. You may need to configure your conda channel order in case the source is not similar to the source shown below. First try running conda config –add channels ramellose again: if this does not work, please see the <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html">conda instructions for managing channels</a>.
+
+<figure>
+  <img src="/images/conda_source.PNG" alt="Screenshot of the command line environment showing the source for mako installation." width="600"> 
+  <figcaption>Screenshot of the command line environment showing the source for mako installation.</figcaption>
+</figure>

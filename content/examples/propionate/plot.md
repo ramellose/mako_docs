@@ -15,7 +15,7 @@ toc: true
 
 To visualize the results, we need to visualize associations between genera, and the number of times these links were found in the database. The matrix layout under the barplot allows <a href="http://gehlenborglab.org/research/projects/upsetr/"><code>UpsetR</code></a> to effectively visualize these links. 
 
-To run <code>UpsetR</code>, we first need to process the data we collected previously, so that it is in a format that <code>UpsetR</code> can work with. Specifically, we will make a column filled with zeroes for each genus. Each association is encoded as a row. Values in the row are set to 1 depending on the genera participating in that association. We will also remove the other columns, since those cannot be used directly by <code>UpsetR</code>, but need to be added via a <code>metadata</code> dataframe. 
+To run <code>UpsetR</code>, we first need to process the data we collected previously, so that it is in a format that <code>UpsetR</code> can work with. Specifically, we will make a column filled with zeroes for each genus. Each association is encoded as a row. Values in the row are set to 1 depending on the genera participating in that association. We will also remove the other columns, since those cannot be used directly by <code>UpsetR</code>, but need to be added via a <code>metadata</code> dataframe. When running the code below, make sure to change the input and output parameters so they match the location of the exported data.
 
 <pre><code>
 library(UpSetR)

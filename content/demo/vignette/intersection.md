@@ -15,7 +15,7 @@ toc: true
 
 The command below generates a network containing all matching edges between <code>demo_1</code> and <code>demo_2</code>. By using the <code>-w</code> flag, mako is told to ignore whether edges have matching edge weights or not. The command below omits this, so edges are only considered part of an intersection if they have the same edge weight. 
 
-<code>mako netstats -fp local_filepath -cf</code>
+<code>mako netstats -fp . -cf</code>
 
 
 If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http://localhost:7475/browser/</a>) and run the following query, you should be able to access all the edges part of sets:
@@ -27,4 +27,6 @@ If you access the Neo4j Browser (<a href="http://localhost:7475/browser/">http:/
   <img src="/images/demo_3.PNG" alt="Network sets with edges." width="600"> 
   <figcaption>Figure 3: Network sets with edges.</figcaption>
 </figure>
+
+The query <code>MATCH p=(n:Set)--() RETURN p LIMIT 50</code> returns 50 patterns consisting of Set nodes connected to any other node. Set nodes can only be connected to Edge nodes, so only Edge nodes part of that particular set are returned in addition to the Set nodes themselves. In this example, the Intersection node connects to the two Edge nodes found in both networks (Figure 3). 
 
