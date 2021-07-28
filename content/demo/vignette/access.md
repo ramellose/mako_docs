@@ -19,4 +19,6 @@ Please check out <a  href="https://ramellose.github.io/mako_docs/neo4j/introduct
 
 For this tutorial, it is assumed that the settings to connect to Neo4j are identical to those used for the Docker instance. Consequently, the Bolt address is <code>bolt://localhost:7688</code>. If you are using the default address, make sure to use <code>bolt://localhost:7687</code> in your commands. 
 
+{{< alert icon="👉" text="For following along with the tutorial, please connect to Neo4j Browser: <a href="../neo4j/browser/browser">connection instructions for Neo4j Browser</a>." >}}
+
 You can follow exactly what mako is doing via the Neo4j Browser. Please find a detailed guide to the Browser here: <a href="https://neo4j.com/developer/neo4j-browser/">Neo4j Browser guide</a>. Access the Neo4j Browser via <a href="http://localhost:7475/browser">http://localhost:7475/browser</a> (Docker setup) or via <a href="http://localhost:7474/browser">http://localhost:7474/browser</a> (default setup). 
