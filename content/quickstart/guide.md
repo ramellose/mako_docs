@@ -21,8 +21,7 @@ The username and password for the browser are "neo4j" and "test" respectively. <
 <video controls="" height="200" width="450">
 <source src="/videos/mako.mp4" type="video/mp4"> </source>
 </video><br>
-<a href="/installation/instructions/conda/">Follow the instructions on installing via <b>Conda</b>.</a>
-Please follow the link to download the files and navigate to the location where you downloaded and unzipped the files. <a href="/examples/sponges/intro">Instructions for the <b>Sponges</b> case study.</a>
+<a href="/installation/instructions/conda/">Follow the instructions on installing via <b>Conda</b>.</a> <a href="/examples/sponges/intro">Please follow this link to download files for the <b>Sponges</b> case study.</a> In your command-line interface, navigate to the location where you downloaded and unzipped the files. 
 <h3>Find microbial associations of interest</h3>
 <video controls="" height="300" width="450">
 <source src="/videos/query.mp4" type="video/mp4"> </source>

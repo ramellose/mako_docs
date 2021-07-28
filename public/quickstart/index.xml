@@ -3,5 +3,4 @@ Follow the instructions on Setting up Docker.
 Connect with Neo4j Browser
 The username and password for the browser are "neo4j" and "test" respectively. Find additional instructions on Neo4j Browser here.
 Write data to the Neo4j database
-Follow the instructions on installing via Conda.
-Please follow the link to download the files and navigate to the location where you downloaded and unzipped the files.</description></item></channel></rss>
+Follow the instructions on installing via Conda. Please follow this link to download files for the Sponges case study. In your command-line interface, navigate to the location where you downloaded and unzipped the files.</description></item></channel></rss>
