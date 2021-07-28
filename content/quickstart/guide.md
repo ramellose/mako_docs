@@ -16,13 +16,13 @@ images: []
 <video controls="" height="300" width="450">
 <source src="/videos/browser.mp4" type="video/mp4"> </source>
 </video><br>
-<a href="/neo4j/browser/browser">Follow the instructions on <b>Neo4j Browser</b></a>
+The username and password for the browser are "neo4j" and "test" respectively. <a href="/neo4j/browser/browser">Find additional instructions on <b>Neo4j Browser</b> here.</a>
 <h3>Write data to the Neo4j database</h3>
 <video controls="" height="200" width="450">
 <source src="/videos/mako.mp4" type="video/mp4"> </source>
 </video><br>
 <a href="/installation/instructions/conda/">Follow the instructions on installing via <b>Conda</b>.</a>
-<a href="/examples/sponges/intro">Follow the instructions for the <b>Sponges</b> case study.</a>
+Please follow the link to download the files and navigate to the location where you downloaded and unzipped the files. <a href="/examples/sponges/intro">Instructions for the <b>Sponges</b> case study.</a>
 <h3>Find microbial associations of interest</h3>
 <video controls="" height="300" width="450">
 <source src="/videos/query.mp4" type="video/mp4"> </source>
