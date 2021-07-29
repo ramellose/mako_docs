@@ -8,7 +8,7 @@ images: []
 ---
 
 <h3>Prerequisites</h3>
-Please make sure you have Docker and Conda installed. 
+Please make sure you have <a href="https://docs.docker.com/get-docker/">Docker</a> and <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/">Conda</a> installed. 
 <h3>Set up a Neo4j database</h3>
 <video controls="" height="200" width="500">
 <source src="/videos/docker.mp4" type="video/mp4"> </source>
@@ -22,7 +22,11 @@ The username and password for the browser are "neo4j" and <br>"test" respectivel
 <h3>Install mako through Conda</h3>
 Follow the instructions on the installation page: <a href="/installation/instructions/conda/">mako installation</a>. 
 <h3>Write data to the Neo4j database</h3>
-<a href="/examples/sponges/intro">Please follow this link to download files for the <b>Sponges</b> case study.</a> <br>In your command-line interface, navigate to the location where <br>you downloaded and unzipped the files. <br>
+<a href="/examples/sponges/intro">Please follow this link to download files for the <b>Sponges</b> case study.</a> <br>In your command-line interface, navigate to the location where <br>you downloaded and unzipped the files (the sponge_biomfiles <b>and</b> the sponge_networks zip files). <br><br>
+Commands:<br>
+<code>mako neo4biom -u neo4j -p test -a neo4j://localhost:7688 -cf -biom sponge_biomfiles</code><br>
+<code>mako io -cf -net sponge_networks</code>
+
 <video controls="" height="200" width="500">
 <source src="/videos/mako.mp4" type="video/mp4"> </source>
 </video><br>
