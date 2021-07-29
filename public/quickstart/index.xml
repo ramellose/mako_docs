@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quickstarts on</title><link>https://ramellose.github.io/mako_docs/quickstart/</link><description>Recent content in Quickstarts on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Mon, 10 May 2021 15:40:25 +0200</lastBuildDate><atom:link href="https://ramellose.github.io/mako_docs/quickstart/index.xml" rel="self" type="application/rss+xml"/><item><title>Quickstart</title><link>https://ramellose.github.io/mako_docs/quickstart/guide/</link><pubDate>Mon, 10 May 2021 15:40:25 +0200</pubDate><guid>https://ramellose.github.io/mako_docs/quickstart/guide/</guid><description>Set up a Neo4j database
-Follow the instructions on Setting up Docker.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quickstarts on</title><link>https://ramellose.github.io/mako_docs/quickstart/</link><description>Recent content in Quickstarts on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Mon, 10 May 2021 15:40:25 +0200</lastBuildDate><atom:link href="https://ramellose.github.io/mako_docs/quickstart/index.xml" rel="self" type="application/rss+xml"/><item><title>Quickstart</title><link>https://ramellose.github.io/mako_docs/quickstart/guide/</link><pubDate>Mon, 10 May 2021 15:40:25 +0200</pubDate><guid>https://ramellose.github.io/mako_docs/quickstart/guide/</guid><description>Prerequisites
+Please make sure you have Docker and Conda installed. Set up a Neo4j database
+For additional information, see the instructions on Setting up Docker.
 Connect with Neo4j Browser
 The username and password for the browser are "neo4j" and "test" respectively. Find additional instructions on Neo4j Browser here.
-Write data to the Neo4j database
-Follow the instructions on installing via Conda. Please follow this link to download files for the Sponges case study. In your command-line interface, navigate to the location where you downloaded and unzipped the files.</description></item></channel></rss>
+Install mako through Conda
+Follow the instructions on the installation page: mako installation. Write data to the Neo4j database
+Please follow this link to download files for the Sponges case study.</description></item></channel></rss>
