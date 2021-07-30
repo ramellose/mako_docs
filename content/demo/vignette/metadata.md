@@ -13,7 +13,7 @@ weight: 106
 toc: true
 ---
 
-The command below carries out hypergeometric tests to see if the metadata (skin vs gut) is linked to specific taxa. Note that this functionality is meant for exploratory analysis only. Depending on the type of metadata available to you, more appropriate statistical methods may be available. The <code>-var all</code> parameter tells mako to run the tests across all variables. 
+The command below carries out hypergeometric tests to see if the metadata (skin vs gut) is linked to specific taxa. Note that this functionality is meant for exploratory analysis only and do not include multiple-testing corrections. Depending on the type of metadata available to you and the structure of your experimental design, more appropriate statistical methods may be available. The <code>-var all</code> parameter tells mako to run the tests across all variables. 
 
 <code>mako metastats -fp . -cf -var all</code>
 

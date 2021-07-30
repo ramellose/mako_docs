@@ -21,4 +21,4 @@ For this tutorial, it is assumed that the settings to connect to Neo4j are ident
 
 {{< alert icon="👉" text="Connect to the Neo4j Browser to follow along with the demo." >}}
 
-You can follow exactly what mako is doing via the Neo4j Browser. For complete instructions on accessing the Neo4j Browser, please continue to <a href="../../../neo4j/browser/browser">the Neo4j Browser page</a>.  
+Y<br>ou can follow exactly what mako is doing via the Neo4j Browser. For complete instructions on accessing the Neo4j Browser, please continue to <a href="../../../neo4j/browser/browser">the Neo4j Browser page</a>.  
