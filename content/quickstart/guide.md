@@ -12,7 +12,7 @@ Please make sure you have <a href="https://docs.docker.com/get-docker/">Docker</
 <h3>Set up a Neo4j database</h3>
 <video controls="" height="200" width="500">
 <source src="/videos/docker.mp4" type="video/mp4"> </source>
-</video>
+</video><br>
 <a href="/neo4j/docker/docker">For additional information, <br>see the instructions on <b>Setting up Docker</b>.</a>
 <h3>Connect with Neo4j Browser</h3>
 <video controls="" height="300" width="500">
