@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ramellose.github.io/mako_docs/sitemap.xml
