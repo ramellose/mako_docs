@@ -18,6 +18,7 @@ Please check if you installed mako from the correct source. During installation,
   <img src="/images/conda_source.png" alt="Screenshot of the command line environment showing the source for mako installation." width="600"> 
   <figcaption>Screenshot of the command line environment showing the source for mako installation.</figcaption>
 </figure>
+You may need to configure your conda channel order in case the source is not similar to the source shown above. First try running conda config –add channels ramellose again: if this does not work, please see <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html">the conda instructions for managing channels</a>.
 </details>
 <br>
 <details>
